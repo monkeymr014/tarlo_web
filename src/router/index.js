@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Tarlo from '../views/Tarlo.vue'
+import Koncerty from '../views/Koncerty.vue'
+
+
 
 Vue.use(VueRouter)
 
@@ -10,6 +14,18 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/tarlo',
+    name: 'Tarlo',
+    component: Tarlo
+  },
+  {
+    path: '/koncerty',
+    name: 'Koncerty',
+    component: Koncerty
+  },
+  
+
   {
     path: '/about',
     name: 'About',
@@ -21,6 +37,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 
