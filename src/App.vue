@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <div id="nav">
       <router-link to="/"></router-link> 
       <router-link to="/tarlo"> O Tarlo</router-link>
@@ -10,13 +10,44 @@
       <router-link to="/prasarider">Prasa i Rider</router-link>
       <router-link to="/kup">Kup sobie</router-link>
     </div>
-  <div id="app">
-    <router-view/>
-  </div>
+    <div id="con" >
+      <router-view/>
+    </div>
+     
+<div>
+  <footer id="footer">
+    Footer
+  </footer>
+</div>
   </div>
 </template>
 
 <style scoped>
+
+
+
+
+#container {
+		min-height:100%;
+		position:relative;
+	}
+#footer {
+  flex-shrink: 0;
+  clear: both;
+    position: fixed;
+    left:0;
+		bottom: 0;
+		width: 100%;
+		height: 60px;		
+		background: red;
+ 
+}
+
+
+
+
+
+
 
 #nav {
   font-family: Avenir, Helvetica, Arial, sans-serif;
