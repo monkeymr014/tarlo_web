@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/"></router-link> 
-      <router-link to="/tarlo"> O Tarlo</router-link>
+      <router-link to="/tarlo">O Tarlo</router-link>
       <router-link to="/koncerty">Koncerty</router-link>
       <router-link to="/rzucuchem">Rzuć Uchem</router-link>
       <router-link to="/rzucokiem">Rzuć Okiem</router-link>
@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<style >
+<style scoped>
 
 
 
@@ -44,8 +44,7 @@
 }
 
 #nav {
-  font-family: 'Tangerine', serif;
- 
+  font-size: 18px;
   text-align: center;
   color: #2c3e50;
    background-color:red;
@@ -56,12 +55,21 @@
 }
 
 #nav a {
-  font-weight: bold;
+  text-decoration: none;
   color: #2c3e50;
-  margin:0.6%;
+  padding:6px;
+  margin:10px;
+  border:2px;
+  border: 4px inset rgba(28,110,164,0.59);
+
+border-radius: 40px 40px 40px 40px;
+
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  
+
+  border: 4px outset rgba(28,110,164,0.59);
+
 }
 </style>
