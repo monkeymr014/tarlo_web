@@ -22,8 +22,7 @@
   </div>
 </template>
 
-<style scoped>
-
+<style >
 
 
 
@@ -31,6 +30,7 @@
 		min-height:100%;
 		position:relative;
 	}
+
 #footer {
   flex-shrink: 0;
   clear: both;
@@ -43,16 +43,9 @@
  
 }
 
-
-
-
-
-
-
 #nav {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Tangerine', serif;
+ 
   text-align: center;
   color: #2c3e50;
    background-color:red;
