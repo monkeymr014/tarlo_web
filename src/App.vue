@@ -23,9 +23,6 @@
 </template>
 
 <style scoped>
-
-
-
 #container {
 		min-height:100%;
 		position:relative;
