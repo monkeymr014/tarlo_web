@@ -1,13 +1,17 @@
 @font-face {
-   font-family: 'DryTransferFolio-Caps';
-src:  url('assets/fonts/DryTransferFolio-Caps.otf') ;
+    font-family: 'DryTransferFolio-Caps';
+    src: url('assets/fonts/DryTransferFolio-Caps.otf');
 }
 
-body{
-background:aqua;
- }
+body {
+    background: aqua;
+}
 
- body{
+body {
+    font-family: 'DryTransferFolio-Caps';
+}
 
-   font-family: 'DryTransferFolio-Caps';
- }
+.preloader {
+    display: flex;
+    flex-direction: none;
+}

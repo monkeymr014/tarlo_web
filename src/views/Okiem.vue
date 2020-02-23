@@ -1,6 +1,6 @@
 <template>
   <div>
-   <TarloH1 msg="Koncerty"/> 
+   <TarloH1 msg="Rzuć Okiem"/> 
    <RightBar/>
   </div>
 </template>
@@ -10,7 +10,7 @@ import TarloH1 from '@/components/TarloH1.vue'
 import RightBar from '@/components/RightBar.vue'
 
 export default {
-  name: 'Koncerty',
+  name: 'Okiem',
   components: {
     TarloH1,RightBar
   }
