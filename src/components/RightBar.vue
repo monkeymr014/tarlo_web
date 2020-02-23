@@ -23,18 +23,19 @@ div{
   right:80px;
   width: 400px;
   height: 200px;
-  border:solid;
+  
 }   
 
 img{
   max-width: 60%;
   height: auto;
-   margin: 0;
+   margin: -50px;
     position: absolute;
     top: 20%;
     left: 20%;
     margin-right: -20%;
     transform: translate(-20%, -50%) ;
+
 }
 
 </style>

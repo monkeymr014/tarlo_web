@@ -1,9 +1,10 @@
 <template>
-  <div class="rightbardown">
-    <p>{{wojtek}} <br/> {{michal}} <br/> {{seba}} <br/> {{rafal}} <br/> </p>
-    <p>{{maciek}}</p>
-    
-
+  <div>
+    <h2>POSŁUCHAJ SOBIE NA:</h2>
+     <a target="_blank" href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4"> <img alt="logo-red" src="../assets/ico/itunes.svg"></a>
+     </br>
+     <a target="_blank" href="https://open.spotify.com/album/6Rt14PX4Mo4q4qqGbFe624"> <img alt="logo-red" src="../assets/ico/spotify.png"></a>
+ 
   </div>
 </template>
 
@@ -30,12 +31,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h2{
+  color:white;
+}
 div{
   position:absolute;
-  top: 400px;
+  top: 300px;
   right:80px;
   width: 400px;
   height: 200px;
+ 
 }   
 
 p{ 
@@ -43,4 +48,10 @@ p{
  color:white;
 }
 
+img{
+  width:170px;
+  height:auto;
+  padding:5px;
+
+}
 </style>

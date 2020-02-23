@@ -11,26 +11,15 @@
     </div>
     <div id="con" >
       <router-view/>
+    </div>   
+    <div>
+      <footer id="footer">Footer</footer>
     </div>
-     
-<div>
-  <footer id="footer">
-    Footer
-  </footer>
-</div>
   </div>
 </template>
 
 <style scoped>
-#home{
-  position:relative;
-  left:50px;
-  top:30px;
- border:solid;
- width:660px;
-  height:415px;
 
-}
 #container {
 		min-height:100%;
 		position:relative;
@@ -52,7 +41,6 @@
   font-size: 25px;
   text-align: center;
   color: #2c3e50;
-   background-color:red;
   padding: 40px;
 }
 

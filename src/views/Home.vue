@@ -1,8 +1,10 @@
 <template>
-  <div id="home">
+  <div>
   <PreLoader/>
-  <iframe width="660" height="415" src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <RightBar/>
+  <div id="home">
+  <iframe id="video" width="660" height="415" src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <RightBar/> 
   </div>
 </template>
 

@@ -1,21 +1,44 @@
 <template>
-<transition name="fade">
-  <div class="preloader">
-    <h1>pasdasd</h1>
+  <transition name="fade">
+    <div v-if="show" class="preloader">
+    <LogoPre/>
     </div>
-    </transition>
+  </transition>
 </template>
 
 <script>
+import LogoPre from '@/components/LogoPre.vue'
+
+
 export default {
   name: 'PreLoader',
+  components: {
+    LogoPre
+  },
   props: {
     msg: String
   },
    data() {
     
-    // return { imgPath: require("statics/reports/logo.png") };
-    return   },
+    return{
+      show:true
+
+
+    }
+  },
+  mounted(){
+    this.showToggle()
+  },
+  methods:{
+    showToggle(){
+      setTimeout(() =>{
+          this.show = false;
+      },5000);
+    }
+  }
+
+
+
 }
 </script>
 
