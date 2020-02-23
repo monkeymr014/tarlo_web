@@ -19,10 +19,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1 { 
+  position: relative;
+  top:10px;
+  text-indent: 15%; 
   color:red;
   margin: 0;
-  
-  
+  font-size: 40px;
 }
 p {
   text-indent: 10%; 
@@ -30,6 +32,7 @@ p {
   margin: 0 10px;
   color:red;
   position: absolute;
-  right: 60%;
+  right: 40%;
+  font-size: 25px;
 }
 </style>

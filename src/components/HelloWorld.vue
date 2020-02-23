@@ -35,7 +35,12 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+   data() {
+    
+    // return { imgPath: require("statics/reports/logo.png") };
+    return {baseAssetPath:"statics/reports/"}
+  },
 }
 </script>
 
