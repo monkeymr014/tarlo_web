@@ -27,12 +27,12 @@ div{
 }   
 
 img{
-  max-width: 60%;
+  max-width: 65%;
   height: auto;
    margin: -50px;
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 26%;
     margin-right: -20%;
     transform: translate(-20%, -50%) ;
 

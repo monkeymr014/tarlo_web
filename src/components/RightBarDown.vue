@@ -32,10 +32,17 @@ export default {
 <style scoped>
 div{
   position:absolute;
-  top: 400px;
-  right:0%;
-  width: 400px;
+  top: 330px;
+  padding:30px;
+  right:5%;
+  width: 290px;
   height: 200px;
+   background: rgba(0,0,0,0.6);
+
+  border-radius: 58px 58px 58px 58px;
+-moz-border-radius: 58px 58px 58px 58px;
+-webkit-border-radius: 58px 58px 58px 58px;
+border: 1px solid #383838;
 }   
 
 p{ 

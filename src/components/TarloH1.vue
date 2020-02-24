@@ -15,13 +15,14 @@ export default {
 }
 </script>
 <style scoped>
-h1 { 
+
+h1 {
   position: relative;
   top:10px;
   text-indent: 15%; 
   color:red;
   margin: 0;
-  font-size: 40px;
+  font-size: 48px;
 }
 
 </style>

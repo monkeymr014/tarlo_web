@@ -13,17 +13,7 @@ export default {
   name: 'RightBarDown',
   props: {
     msg: String
-  },
-   data() {
-    
-    // return { imgPath: require("statics/reports/logo.png") };
-    return {wojtek:"Veddie Hare – gitara śpiew teksty",
-            michal:"Michał Ruszkiewicz – perkusja",
-            seba:"Sebastian Pokojowy – bas",
-            rafal:"Rafał Wielgosz – gitara teksty",
-            maciek:"Gościnnie: Maciek Gładysz"
-            }
-  },
+  }
 
 }
 
@@ -37,9 +27,16 @@ h2{
 div{
   position:absolute;
   top: 300px;
-  right:0%;
-  width: 400px;
-  height: 200px;
+  right:10%;
+  padding:20px 10px;
+  width: 205px;
+  height: 250px;
+  background: rgba(0,0,0,0.6);
+
+  border-radius: 58px 58px 58px 58px;
+-moz-border-radius: 58px 58px 58px 58px;
+-webkit-border-radius: 58px 58px 58px 58px;
+border: 1px solid #383838;
  
 }   
 

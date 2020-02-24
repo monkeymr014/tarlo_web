@@ -14,9 +14,9 @@
     </div>   
     <div>
       <footer id="footer">
-          <a target="_blank" href="https://www.facebook.com/tarlorockband/"> <img alt="fb-footer" src="./assets/socialmedia/fb/char.png"></a>
-          <a target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg"> <img alt="yt-foter" src="./assets/socialmedia/yt/char.png"></a>
-          <a target="_blank" href=""> <img alt="" src="./assets/socialmedia/instagram/char.png"></a>
+          <a target="_blank" href="https://www.facebook.com/tarlorockband/"> <img alt="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg"> <img alt="yt-foter" src="./assets/socialmedia/yt/red.png"></a>
+          <a target="_blank" href=""> <img alt="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
       </footer>
     </div>
   </div>
@@ -36,40 +36,45 @@
     left:0;
 		bottom: 0;
 		width: 100%;
-		height: 60px;		
-		background: red;
+		height: 70px;		
  }
 #footer img {
-  	width: 4%;
+  position:relative;
+  	left:40%;
+    margin:12px;
+    bottom: 1px;
+    width: 4%;
     height: auto;
-    background:white;		
+    background:black;	
+    margin:0px 1px 0px 0px;	
  }
 
 
 
 
 #nav {
-  font-size: 23px;
+  font-size: 26px;
   text-align: center;
-  color: #2c3e50;
+  color: white;
   padding: 40px;
 }
 
 #nav a {
   text-decoration: none;
-  color: #2c3e50;
-  padding:6px;
+  color: white;
+  padding:12px;
   margin:10px;
-  border:2px;
-  border: 4px inset rgba(28,110,164,0.59);
+  border: 3px inset rgba(194,171,171,0.89);
   border-radius: 40px 40px 40px 40px;
-
+  background: rgba(0,0,0,0.6);
 }
 
 #nav a.router-link-exact-active {
   
+  color: red;
+  background: rgba(0,0,0,0.6);
+  border: 3px outset rgba(194,171,171,0.89);
 
-  border: 4px outset rgba(28,110,164,0.59);
 
 }
 </style>
