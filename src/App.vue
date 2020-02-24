@@ -14,9 +14,9 @@
     </div>   
     <div>
       <footer id="footer">
-          <a target="_blank" href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4"> <img alt="logo-red" src="./assets/socialmedia/fb/white.png"></a>
-          <a target="_blank" href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4"> <img alt="logo-red" src="./assets/socialmedia/yt/white.png"></a>
-          <a target="_blank" href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4"> <img alt="logo-red" src="./assets/socialmedia/instagram/char.png"></a>
+          <a target="_blank" href="https://www.facebook.com/tarlorockband/"> <img alt="fb-footer" src="./assets/socialmedia/fb/char.png"></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg"> <img alt="yt-foter" src="./assets/socialmedia/yt/char.png"></a>
+          <a target="_blank" href=""> <img alt="" src="./assets/socialmedia/instagram/char.png"></a>
       </footer>
     </div>
   </div>
