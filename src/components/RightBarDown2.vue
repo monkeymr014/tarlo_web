@@ -2,7 +2,7 @@
   <div>
     <h2>POSŁUCHAJ SOBIE NA:</h2>
      <a target="_blank" href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4"> <img alt="logo-red" src="../assets/ico/itunes.svg"></a>
-     </br>
+     <br/>
      <a target="_blank" href="https://open.spotify.com/album/6Rt14PX4Mo4q4qqGbFe624"> <img alt="logo-red" src="../assets/ico/spotify.png"></a>
  
   </div>
@@ -37,7 +37,7 @@ h2{
 div{
   position:absolute;
   top: 300px;
-  right:80px;
+  right:0%;
   width: 400px;
   height: 200px;
  

@@ -33,7 +33,7 @@ export default {
 div{
   position:absolute;
   top: 400px;
-  right:80px;
+  right:0%;
   width: 400px;
   height: 200px;
 }   

@@ -13,7 +13,11 @@
       <router-view/>
     </div>   
     <div>
-      <footer id="footer">Footer</footer>
+      <footer id="footer">
+          <a target="_blank" href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4"> <img alt="logo-red" src="./assets/socialmedia/fb/white.png"></a>
+          <a target="_blank" href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4"> <img alt="logo-red" src="./assets/socialmedia/yt/white.png"></a>
+          <a target="_blank" href="https://music.apple.com/pl/album/prolog-single/1484447071?app=music&ign-mpt=uo%3D4"> <img alt="logo-red" src="./assets/socialmedia/instagram/char.png"></a>
+      </footer>
     </div>
   </div>
 </template>
@@ -34,17 +38,22 @@
 		width: 100%;
 		height: 60px;		
 		background: red;
- 
-}
+ }
+#footer img {
+  	width: 4%;
+    height: auto;
+    background:white;		
+ }
+
+
+
 
 #nav {
-  font-size: 25px;
+  font-size: 23px;
   text-align: center;
   color: #2c3e50;
   padding: 40px;
 }
-
-
 
 #nav a {
   text-decoration: none;

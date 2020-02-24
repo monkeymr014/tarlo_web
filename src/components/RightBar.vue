@@ -20,7 +20,7 @@ export default {
 div{
   position:fixed;
   top:200px;
-  right:80px;
+  right:0%;
   width: 400px;
   height: 200px;
   
