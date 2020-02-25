@@ -32,25 +32,23 @@
 #footer {
   flex-shrink: 0;
   clear: both;
-    position: fixed;
-    left:0;
-		bottom: 0;
-		width: 100%;
-		height: 70px;		
+  position: fixed;
+  left:0;
+	bottom: 2%;
+	width: 100%;
+  height: 60px;
  }
+
 #footer img {
-  position:relative;
-  	left:40%;
-    margin:12px;
-    bottom: 1px;
+    position:relative;
+  	left:43%;
+    bottom: 12px;
+    padding:4px;
     width: 4%;
     height: auto;
     background:black;	
-    margin:0px 1px 0px 0px;	
+    margin:10px 1px 2px 1px;	
  }
-
-
-
 
 #nav {
   font-size: 26px;
