@@ -17,17 +17,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-div{
-  
-  
-}
+
 p {
 background: rgba(0,0,0,0.6);
   text-indent: 10%; 
   padding: 1%;
   margin: 10px 15px;
   color:red;
-  position: absolute;
+  position: fixed;
+  top:25%;
   right: 40%;
   font-size: 25px;
 }

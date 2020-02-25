@@ -70,7 +70,7 @@
 #nav a.router-link-exact-active {
   
   color: red;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.9);
   border: 3px outset rgba(194,171,171,0.89);
 
 

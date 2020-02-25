@@ -33,7 +33,7 @@ export default {
     showToggle(){
       setTimeout(() =>{
           this.show = false;
-      },5000);
+      },11000);
     }
   }
 

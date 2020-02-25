@@ -21,13 +21,18 @@ export default {
 
 <style scoped>
 div{
- 
-  top:200px;
-  left:0px;
-  width: 100%;
+  margin: 0 auto;
+  width: 99%;
   height:100%;
- border:solid;
- border-color:red;  
+  border:solid;
+  border-color:red;  
+  background-image: url(../assets/Mapka_tarlo_webpage.jpg);
+  background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+  
+
 }   
  #d1 {
   position: fixed;
@@ -57,22 +62,30 @@ div{
 
 #logoTravel{
   float: left;
-position: relative;
-    left:80px;
-
-  height: 40px;
-  width: 100%;
-  margin-left:-50%;
+  position: relative;
+  left:-40%;
+  top:0;
+  bottom:0;
+  height: 60px;
+  width: 90%;
+  margin: 0 auto;
   pading:0;
+  animation: droga 12s ;
+  animation-delay: 1s;
 
-
-  animation: droga 5s;
 }
+
+
+
 
 @keyframes droga
 {
-  0% { transform:translateX(0) scale(1); }
-  100% { transform:translateX(90%) scale(1); }
+    0% { transform:translateX(0) translateY(0%) scale(1); }
+    60% { transform:translateX(90%) translateY(100%) scale(1); }
+    60% { transform:translateX(90%)  scale(1);  }
+    85% { transform:translateX(50%)  scale(10); top:50%; }
+    100% { transform:translateX(50%)   scale(10); top:50%; }
+
 }
 
 </style>

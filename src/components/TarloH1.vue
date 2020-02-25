@@ -17,12 +17,19 @@ export default {
 <style scoped>
 
 h1 {
-  position: relative;
-  top:10px;
-  text-indent: 15%; 
+  background-color: black;
+  position: fixed;
+  text-align: left;
   color:red;
-  margin: 0;
-  font-size: 48px;
+  margin: 0 auto;
+  padding:0px;
+  font-size: 60px;
+  }
+div{
+  position:absolute;
+  top:15%;
+  left:20%;
+  margin-top:10px;
 }
 
 </style>
