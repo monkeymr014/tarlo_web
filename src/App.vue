@@ -51,7 +51,7 @@
  }
 
 #nav {
-  font-size: 26px;
+  font-size: 22px;
   text-align: center;
   color: white;
   padding: 40px;
