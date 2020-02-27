@@ -1,6 +1,10 @@
 <template>
   <div>
     <p> {{  List() }} </p>
+    <ul>
+      <li   ></li>
+    
+    </ul>
  </div>
 </template>
 
@@ -12,16 +16,22 @@ export default {
   props: {
     msg: String
   },
+  data() {
 
+    return {
+      results: [],
+    }
+  },
 
   
   methods: {
 
     List() {
-      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=events&access_token=EAACySB6mumsBACLBbwpYqolPCS5ZAsizXqKr0Ox57oIvBrbZCHCoAHNTbz8NMcZA4gk5H5UZBvCXXZBHVZBGbjBwIEv3LOzVmbCXzIJLJkObohTb3fDgE2auEZBhNHppDZBh4M2LFjq4yVYzTGh5JToo9S9jwbFnGeOys4FdN2sZAa9goTZAJyiwZAzhocLk7FHE1UZD')
+      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=events&access_token=EAAEyl1RiMPcBANHHg0kffZAJ6bx7ZBuaGgDsaecDUwzGKy8K2XrPmW1SCP1kxXAbU0drpQ4fuysVC3g2mHYlEgZC1v62OhP3EgYxMkq48GRoBiuW4j8WwvBsYUfnlOYhNuzRFeeTZAiMMwq6CLuvN2EJsuzUbrZCudOVu8SLwywZDZD')
     
         .then((re) => {
-console.log(re);
+          this.results = re.data.data[0].events.data;
+          console.log(re.data.data[0].events.data);
 })
 
         } 
@@ -29,7 +39,6 @@ console.log(re);
 
 
   }
-
 
 </script>
 <style scoped>
