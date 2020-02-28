@@ -33,9 +33,12 @@ export default {
   border-radius: 40px;
   position:absolute;
   margin:0px 0px 0px 0px;
-  width:40%;
-  height:45%;
+  width:38%;
+  height:40%;
   padding:10px;
+  color:red;
+  font-size:42px;
+  text-align:center;
 }
 
 span {
@@ -43,15 +46,17 @@ span {
   border: 4px solid white;
   border-radius: 40px;
   position:absolute;
-  margin:20px 20px 20px 20px;
+  margin:1% 1% 1% 1% ;
   width:35%;
   height:40%;
   padding:10px;
   color:white;
-  font-size:50px;
+  font-size:38px;
   text-align:center;
+
 }
 
+                        
 #prespack{
  left:0px;
   
@@ -63,10 +68,12 @@ span {
 
 #riderout{
   left:50%;
-  background-image: url(./../assets/pr/rider-plenr.jpg);
+  background-image :linear-gradient(black, black), url(./../assets/pr/rider-plenr.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 110%;  
+    background-blend-mode: saturation;
+
+  background-size: 120%;  
   background-attachment: absolute;
     opacity: 0.9;
 }
@@ -77,18 +84,12 @@ top:53%;
   background-image: url(./../assets/pr/rider-club.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 110%;  
+  background-size: 120%;  
   background-attachment: absolute;
-  -webkit-filter: blur(0.8px);
--moz-filter: blur(0.8px);
--o-filter: blur(0.8px);
--ms-filter: blur(0.8px);
-filter: blur(0.8px);
--webkit-filter: brightness(0.8);
--moz-filter: brightness(0.8);
--o-filter: brightness(0.8);
--ms-filter: brightness(0.8);
-filter: brightness(0.8);
+
+  
+
+
 }
 
 
@@ -99,15 +100,19 @@ filter: brightness(0.8);
   height:50%;
   top:30%;
   
+
+  
 }
 p {
 background: rgba(0,0,0,0.6);
   text-indent: 0%; 
   padding:2%;
   margin: 0 auto ;
-  color:red;
   right: 40%;
   font-size: 25px;
   color:white;
+}
+img {
+  filter: grayscale(100%);
 }
 </style>
