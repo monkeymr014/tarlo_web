@@ -42,8 +42,8 @@ h2{
 
 div{
   position:fixed;
-  top: 330px;
-  right:3%;
+  top:32%;
+  right:35%;
   padding:20px;
   padding-top:50px;
   width: 400px;

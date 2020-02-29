@@ -3,6 +3,8 @@
    <TarloH1 msg="Kup Sobie Nie Żałuj"/> 
    <RightBar/>
    <RightBarDown2/>
+    <TopYT/>
+
   </div>
 </template>
 <script>
@@ -10,11 +12,12 @@
 import TarloH1 from '@/components/TarloH1.vue'
 import RightBar from '@/components/RightBar.vue'
 import RightBarDown2 from '@/components/RightBarDown2.vue'
+import TopYT from '@/components/TopYT.vue'
 
 export default {
   name: 'Kup',
   components: {
-    TarloH1,RightBar,RightBarDown2
+    TarloH1,RightBar,RightBarDown2,TopYT
   }
 }
 </script>
