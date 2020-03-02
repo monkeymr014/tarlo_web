@@ -68,14 +68,13 @@ span {
 
 #riderout{
   left:50%;
-  background-image :linear-gradient(black, black), url(./../assets/pr/rider-plenr.jpg);
+  background-image : url(./../assets/pr/rider-plenr.jpg);
   background-position: center;
   background-repeat: no-repeat;
-    background-blend-mode: saturation;
 
   background-size: 120%;  
   background-attachment: absolute;
-    opacity: 0.9;
+    
 }
 
 #riderin{
@@ -112,7 +111,5 @@ background: rgba(0,0,0,0.6);
   font-size: 25px;
   color:white;
 }
-img {
-  filter: grayscale(100%);
-}
+
 </style>

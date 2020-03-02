@@ -1,8 +1,6 @@
 <template>
   <div>
-    <img id="d1" src="../assets/historia/droga/1.png">
-    <img id="d2" src="../assets/historia/droga/2.png">
-    <img id="d3" src="../assets/historia/droga/3.png">
+    
 
       <img id="logoTravel" alt="logo-red" src="../assets/logo_red_svg.svg">
   </div>
@@ -71,8 +69,7 @@ div{
   margin: 0 auto;
   pading:0;
   animation: droga 12s ;
-  animation-delay: 1s;
-
+  animation-delay: 2s;
 }
 
 
