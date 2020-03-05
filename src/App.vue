@@ -14,6 +14,7 @@
     </div>   
     <div>
       <footer id="footer">
+          
           <a target="_blank" href="https://www.facebook.com/tarlorockband/"> <img alt="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
           <a target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg"> <img alt="yt-foter" src="./assets/socialmedia/yt/red.png"></a>
           <a target="_blank" href=""> <img alt="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
@@ -22,7 +23,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 #container {
 		min-height:100%;
@@ -30,28 +31,36 @@
 	}
 
 #footer {
-  flex-shrink: 0;
+  flex-shrink:0;
   clear: both;
   position: fixed;
   left:0;
-	bottom: 2%;
+  padding:2%;
+	bottom: 0;
 	width: 100%;
   height: 60px;
+   display: flex;
+   
+     flex-basis: length;
+    flex-flow:center;
  }
 
-#footer img {
-    position:relative;
-  	left:43%;
-    bottom: 12px;
-    padding:4px;
-    width: 4%;
+ img {
+ 
+  	padding:px;
+    width: 10%;
+    margin:px;
     height: auto;
-    background:black;	
-    margin:10px 1px 2px 1px;	
+    background:black;		
  }
+@media (min-width: 1024px){
 
+  
 #nav {
-  font-size: 22px;
+  @media (min-width: 1226px){
+  font-size: 23px;
+}
+  font-size: 16px;
   text-align: center;
   color: white;
   padding: 40px;
@@ -74,5 +83,5 @@
   border: 3px outset rgba(194,171,171,0.89);
 
 
-}
+}}
 </style>

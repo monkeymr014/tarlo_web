@@ -18,22 +18,21 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+
+
 div{
   position:fixed;
   top:15px;
-  left:3%;
-  width: 200px;
+  left:1.5%;
+  width: 9%;
   height: 100px;
- 
 }   
 
 img{
   max-width: 65%;
   height: auto;
-    position: absolute;
-    
-
+  position: absolute;
 }
 
 </style>
