@@ -14,22 +14,29 @@ export default {
 
 }
 </script>
-<style scoped>
+<style  lang="scss" scoped>
 
 h1 {
   background-color: black;
-  position: fixed;
+  position: relative;
   text-align: left;
   color:red;
-  margin: 0 auto;
-  padding:0px;
+  margin: 0px auto;
+  padding:1px 10px;
   font-size: 60px;
   }
+
 div{
   position:absolute;
-  top:15%;
+  top:0;
+  width:auto;
+  height:auto;
   left:20%;
-  margin-top:10px;
+  margin:0;
+  padding:0px;
+  border:solid;
+  border-color:red;
+  
 }
 
 </style>

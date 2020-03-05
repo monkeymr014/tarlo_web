@@ -56,8 +56,6 @@ div{
 }
 
 
-
-
 #logoTravel{
   float: left;
   position: relative;

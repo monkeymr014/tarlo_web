@@ -29,25 +29,24 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 div{
   position:absolute;
-  top: 330px;
+  top: 200px;
   padding:30px;
   right:5%;
   width: 290px;
   height: 200px;
-   background: rgba(0,0,0,0.6);
-
+  background: rgba(0,0,0,0.6);
   border-radius: 58px 58px 58px 58px;
--moz-border-radius: 58px 58px 58px 58px;
--webkit-border-radius: 58px 58px 58px 58px;
-border: 1px solid #383838;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
 }   
 
 p{ 
   font-size:20px;
- color:white;
+  color:white;
 }
 
 </style>

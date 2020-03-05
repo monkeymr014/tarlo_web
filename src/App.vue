@@ -14,10 +14,11 @@
     </div>   
     <div>
       <footer id="footer">
-          
-          <a target="_blank" href="https://www.facebook.com/tarlorockband/"> <img alt="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
-          <a target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg"> <img alt="yt-foter" src="./assets/socialmedia/yt/red.png"></a>
-          <a target="_blank" href=""> <img alt="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
+          <div id="footer-con">
+            <a target="_blank" href="https://www.facebook.com/tarlorockband/"> <img alt="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg"> <img alt="yt-foter" src="./assets/socialmedia/yt/red.png"></a>
+            <a target="_blank" href=""> <img alt="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
+          </div>  
       </footer>
     </div>
   </div>
@@ -25,46 +26,67 @@
 
 <style lang="scss" scoped>
 
-#container {
-		min-height:100%;
-		position:relative;
+#con {
+		min-height:100%;  		
+    top:108px;
+    position:fixed;
+    overflow:scroll;
 	}
 
 #footer {
-  flex-shrink:0;
+  display: flex;
   clear: both;
   position: fixed;
   left:0;
-  padding:2%;
+  padding:0;
 	bottom: 0;
 	width: 100%;
-  height: 60px;
-   display: flex;
-   
-     flex-basis: length;
-    flex-flow:center;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
  }
+
+#footer-con{
+  position:relative;
+  left:0;
+  margin:0px 30px 1px 30px;
+  padding:3px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
 
  img {
- 
-  	padding:px;
-    width: 10%;
-    margin:px;
-    height: auto;
-    background:black;		
+  border:solid;
+  border-color:black;
+  position:relative;
+  padding:0px;
+  width: 50px;
+  margin:1px 0 8px 0 ; 
+  height: auto;
+  background:black;		
+  display:flex;
+  align-items: center;
+  justify-content: center;
  }
-@media (min-width: 1024px){
 
-  
+//DESKTOP
+@media (min-width: 1024px){ 
 #nav {
   @media (min-width: 1226px){
-  font-size: 23px;
-}
-  font-size: 16px;
+    font-size: 23px;
+    }
+    font-size: 16px;
+  top:0;
   text-align: center;
   color: white;
+  left:0px;
   padding: 40px;
-}
+  width:100%;
+  margin:0px;
+  position:fixed;
+  z-index:10;
+  }
 
 #nav a {
   text-decoration: none;
@@ -74,14 +96,12 @@
   border: 3px inset rgba(194,171,171,0.89);
   border-radius: 40px 40px 40px 40px;
   background: rgba(0,0,0,0.6);
-}
+  }
 
 #nav a.router-link-exact-active {
-  
   color: red;
   background: rgba(0,0,0,0.9);
   border: 3px outset rgba(194,171,171,0.89);
-
-
-}}
+  }
+}
 </style>
