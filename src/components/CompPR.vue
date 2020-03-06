@@ -24,8 +24,7 @@
 1
 <script>
 
-  import pdf from 'vue-pdf'
-
+import pdf from 'vue-pdf'
 
 export default {
   name: 'CompPR',
@@ -46,27 +45,19 @@ export default {
   },
 methods: {
         logContent() {
- 
             this.$refs.myPdfComponent.pdf.forEachPage(function(page) {
- 
                 return page.getTextContent()
                 .then(function(content) {
- 
                     var text = content.items.map(item => item.str);
                     console.log(text);
                 })
             });
         }
     }
-
-
-
-
-
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 img {
   height: 100%;

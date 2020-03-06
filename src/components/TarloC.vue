@@ -25,10 +25,8 @@ div{
   padding:0;
   left:20px;
   width:60%;
-  height:auto;
-  
+  height:auto; 
 }
-
 
 p{
 @media (min-width: 1024px){ 
@@ -37,7 +35,6 @@ p{
 @media (min-width: 1226px){ 
   font-size: 23px;
 }
-
   background: rgba(0,0,0,0.6);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;

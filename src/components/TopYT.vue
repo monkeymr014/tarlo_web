@@ -20,7 +20,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
-
 div{
   position:fixed;
   top:15px;
@@ -30,7 +29,7 @@ div{
 }   
 
 img{
-  max-width: 65%;
+  max-width: 80%;
   height: auto;
   position: absolute;
 }

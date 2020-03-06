@@ -1,8 +1,8 @@
 <template>
   <div >
     <p>tarloband@gmail.com</p>
-    <p>fb: tarlorockband ǀ yt: TARŁO ǀ www.tarlo.pl</p>
-    <p>+48 728 306 334</p>
+    <p>fb: tarlorockband <br/> yt: TARŁO <br/> www.tarlo.pl</p>
+    <p>tel: +48 728 306 334</p>
   </div>
 </template>
 1
@@ -18,23 +18,30 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+
 div{
-  position:fixed;
+  position:relative;
   left:20%;
-  width:500px;
-  top:30%;
+  width:600px;
+  top:150px;
   border:red;
+  background: rgba(0,0,0,0.6);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
 }
-p {
-background: rgba(0,0,0,0.6);
+
+p{
+  background: rgba(0,0,0,0.6);
   text-indent: 0%; 
   padding:2%;
   margin: 0 auto ;
   color:red;
-
   right: 40%;
-  font-size: 25px;
+  font-size: 40px;
   color:white;
 }
+
 </style>

@@ -1,7 +1,5 @@
 <template>
   <div>
-    
-
       <img id="logoTravel" alt="logo-red" src="../assets/logo_red_svg.svg">
   </div>
 </template>
@@ -17,21 +15,8 @@ export default {
 
 </script>
 
-<style scoped>
-div{
-  margin: 0 auto;
-  width: 99%;
-  height:100%;
-  border:solid;
-  border-color:red;  
-  background-image: url(../assets/Mapka_tarlo_webpage.jpg);
-  background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-  
+<style lang="scss" scoped>
 
-}   
  #d1 {
   position: fixed;
   top:30%;
@@ -47,6 +32,7 @@ div{
   height: 5%;
   width: 5%;
 }
+
 #d3 {
   position: fixed;
   top:35%;
@@ -54,7 +40,6 @@ div{
   height: 5%;
   width: 5%;
 }
-
 
 #logoTravel{
   float: left;
@@ -65,13 +50,10 @@ div{
   height: 60px;
   width: 90%;
   margin: 0 auto;
-  pading:0;
+  padding:0;
   animation: droga 12s ;
   animation-delay: 2s;
 }
-
-
-
 
 @keyframes droga
 {

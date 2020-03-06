@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div v-if="show" id="nav">
       <router-link  to="/tarlo">O Tarlo</router-link>
       <router-link to="/koncerty">Koncerty</router-link>
       <router-link to="/rzucuchem">Rzuć Uchem</router-link>
@@ -15,25 +15,52 @@
     <div>
       <footer id="footer">
           <div id="footer-con">
-            <a target="_blank" href="https://www.facebook.com/tarlorockband/"> <img alt="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg"> <img alt="yt-foter" src="./assets/socialmedia/yt/red.png"></a>
-            <a target="_blank" href=""> <img alt="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
+            <a target="_blank" @mouseover="grow = !grow" href="https://www.facebook.com/tarlorockband/"> <img alt="fb-footer" id="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg"> <img alt="yt-foter" id="yt-footer" src="./assets/socialmedia/yt/red.png"></a>
+            <a target="_blank" href=""> <img alt="insta-footer" id="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
           </div>  
       </footer>
     </div>
   </div>
 </template>
 
+<script>
+
+export default {
+  name: 'App',
+
+   data() {
+    
+    return{
+      show:false
+
+    }
+  },
+  mounted(){
+    this.showToggle()
+  },
+  methods:{
+    showToggle(){
+      setTimeout(() =>{
+          this.show = true;
+      },11000);
+    }
+  }
+}
+</script>
+
+
+
 <style lang="scss" scoped>
 
-#con {
-		min-height:100%;  		
-    top:108px;
-    position:fixed;
-    overflow:scroll;
-	}
+#con{
+  min-height:100%;  	
+  min-width:100%;  	
+  top:108px;
+  position:fixed;
+}
 
-#footer {
+#footer{
   display: flex;
   clear: both;
   position: fixed;
@@ -44,7 +71,9 @@
   height: 50px;
   align-items: center;
   justify-content: center;
- }
+
+  
+}
 
 #footer-con{
   position:relative;
@@ -56,19 +85,29 @@
   justify-content: center;
 }
 
- img {
+#insta-footer , #fb-footer {
   border:solid;
   border-color:black;
   position:relative;
   padding:0px;
   width: 50px;
-  margin:1px 0 8px 0 ; 
+  margin:1px 0 2px 0 ; 
+  height: auto;
+  background:black;	
+	
+ }
+
+#yt-footer{
+  border:solid;
+  border-color:black;
+  position:relative;
+  padding:0px;
+  width: 60px;
+  margin:1px 0 10px 0 ; 
   height: auto;
   background:black;		
-  display:flex;
-  align-items: center;
-  justify-content: center;
- }
+ 
+}
 
 //DESKTOP
 @media (min-width: 1024px){ 
@@ -85,8 +124,10 @@
   width:100%;
   margin:0px;
   position:fixed;
-  z-index:10;
-  }
+  z-index:9;
+  overflow: hidden;
+
+}
 
 #nav a {
   text-decoration: none;

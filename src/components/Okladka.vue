@@ -26,28 +26,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
-
-
-
-#content{
+div{
   position:fixed;
   left:2%;
   width:28%;
   height:50%;
   top:32%;
-  
-
-  
 }
 
 img{
   margin:0% 15% 0% 15%; 
   padding:auto;
-width:70%; 
+  width:70%; 
   height:auto;
-
 }
 
 p{
@@ -56,8 +49,8 @@ p{
   font-size:30px;
   padding:0;
   margin:0;
-
 }
+
 span{
   text-align:center;
   padding:0;

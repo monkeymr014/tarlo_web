@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div v-if="show" class="preloader">
-    <LogoPre/>
+      <LogoPre/>
     </div>
   </transition>
 </template>
@@ -36,9 +36,6 @@ export default {
       },11000);
     }
   }
-
-
-
 }
 </script>
 

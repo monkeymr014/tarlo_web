@@ -16,26 +16,31 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 div{
+  
+@media (min-width: 1024px){ 
+  right:60px;
+  width: 200px;
+  height: 190px;
+  }
+@media (min-width: 1226px){ 
+  right:100px;
+  width: 230px;
+  }
+  padding:10px;
   position:fixed;
-  top:200px;
+  top:130px;
   right:0%;
   width: 400px;
   height: 200px;
-  
+  text-align:center;
 }   
 
 img{
-  max-width: 65%;
+  max-width: 100%;
   height: auto;
-   margin: -50px;
-    position: absolute;
-    top: 20%;
-    left: 26%;
-    margin-right: -20%;
-    transform: translate(-20%, -50%) ;
-
+  margin: 0;
 }
 
 </style>

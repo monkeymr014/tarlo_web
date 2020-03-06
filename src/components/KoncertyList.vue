@@ -41,7 +41,7 @@ export default {
         } 
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 
 img {
     position:absolute;
@@ -57,6 +57,7 @@ li{
   color:red;
   text-decoration:none;
   list-style:none;
+  padding:0;
 }
 span {
   padding: 0%;
@@ -68,7 +69,12 @@ span {
   font-size: 22px;
 }
 div{
-  background: rgba(0,0,0,0.8);
+  
+  background: rgba(0,0,0,0.6);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
   position:fixed;
   left:2%;
   width:70%;
