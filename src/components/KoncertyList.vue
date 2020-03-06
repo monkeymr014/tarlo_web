@@ -5,8 +5,7 @@
     <ul>
       <li v-for=" item in results " v-bind:key="item.id">
            <img  src="item.cover.source"/>
-        
-        <span>{{ item.start_time.substring(0,10) }} :</span><span>{{ item.name }}</span><a :href="link+ item.id" target="_blank"> <img alt="fb-footer" src="../assets/socialmedia/fb/char.png"> </a><br/><br/>
+        <span>{{ item.start_time.substring(0,10) }} :</span><span>{{ item.name }}</span><a :href="link+ item.id" target="_blank"> <img alt="fb-footer" src="../assets/socialmedia/fb/char.png"> </a><br/>
       </li>
 </ul>
  </div>
@@ -47,21 +46,24 @@ img {
     position:absolute;
     left:90%;
     padding:1px;
-    width: 2%;
+    width: 22px;
     height: auto;
-    margin:1px;
+    margin:0px;
     background:white;	
  }
 
+
 li{
   color:red;
-  text-decoration:none;
+  text-decoration:underline;
   list-style:none;
-  padding:0;
+  padding:-12px;
+  margin:0;
+
 }
 span {
   padding: 0%;
-  margin: 1px 1px;
+  margin: 0;
   position:relative;
   color:red;
   top:5%;
@@ -69,7 +71,6 @@ span {
   font-size: 22px;
 }
 div{
-  
   background: rgba(0,0,0,0.6);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
@@ -80,6 +81,8 @@ div{
   width:70%;
   height:auto;
   top:30%;
+  padding:0;
+  margin:0;
   
 }
 </style>

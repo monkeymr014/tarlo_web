@@ -4,26 +4,26 @@
 }
 
 body {
-    @media (min-width: 1024px){
-    background: black;
-    background-image: url(./assets/tył.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
+    @media (min-width: 1024px) {
+        background: black;
+        background-image: url(./assets/tył.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
     }
 }
 
 body {
-    @media (min-width: 1024px){
-    font-family: 'DryTransferFolio-Caps';
+    @media (min-width: 1024px) {
+        font-family: 'DryTransferFolio-Caps';
     }
 }
 
 #video {
-    position: absolute;
+    position: relative;
     left: 50px;
-    top: 150px;
+    top: 50px;
     width: 660px;
     height: 415px;
     border: solid;
@@ -47,7 +47,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
-    
 }
 
 .fade-enter-active,

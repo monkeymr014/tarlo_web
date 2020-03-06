@@ -2,8 +2,6 @@
   <div class="rightbardown">
     <p>{{wojtek}} <br/> {{michal}} <br/> {{seba}} <br/> {{rafal}} <br/> </p>
     <p>{{maciek}}</p>
-    
-
   </div>
 </template>
 

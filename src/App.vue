@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <div v-if="show" id="nav">
+     <transition name="fade">
+        <div v-if="sshow" class="preloader">
+      <LogoPre/>
+    </div>
+  </transition>
+    <div  id="nav">
       <router-link  to="/tarlo">O Tarlo</router-link>
       <router-link to="/koncerty">Koncerty</router-link>
       <router-link to="/rzucuchem">Rzuć Uchem</router-link>
@@ -25,14 +30,23 @@
 </template>
 
 <script>
+import LogoPre from '@/components/LogoPre.vue'
+
 
 export default {
-  name: 'App',
-
+  name: 'PreLoader',
+  components: {
+    LogoPre
+  },
+  props: {
+    msg: String
+  },
    data() {
     
     return{
-      show:false
+      show:true,
+      grow:true
+
 
     }
   },
@@ -42,13 +56,12 @@ export default {
   methods:{
     showToggle(){
       setTimeout(() =>{
-          this.show = true;
+          this.show = false;
       },11000);
     }
   }
 }
 </script>
-
 
 
 <style lang="scss" scoped>
@@ -112,21 +125,22 @@ export default {
 //DESKTOP
 @media (min-width: 1024px){ 
 #nav {
-  @media (min-width: 1226px){
+  @media (min-width: 1285px){
     font-size: 23px;
     }
     font-size: 16px;
   top:0;
+
+  right:0;
   text-align: center;
   color: white;
-  left:0px;
-  padding: 40px;
-  width:100%;
-  margin:0px;
+  padding: 20px 0 20px 0;
+  max-width:100%;
+  width:85%;
+  margin:20px 5% 20px 5%;
   position:fixed;
   z-index:9;
   overflow: hidden;
-
 }
 
 #nav a {

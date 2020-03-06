@@ -1,10 +1,10 @@
 <template>
   <div>
-   <TarloH1 msg="Rzuć Okiem"/> 
-   <RightBar/>
-   <RightBarDown2/>
-   <TopYT/>
-
+    <TarloH1 msg="Rzuć Okiem"/> 
+    <RightBar/>
+    <RightBarDown2/>
+    <TopYT/>
+    <Galery/>
   </div>
 </template>
 <script>
@@ -13,12 +13,13 @@ import TarloH1 from '@/components/TarloH1.vue'
 import RightBar from '@/components/RightBar.vue'
 import RightBarDown2 from '@/components/RightBarDown2.vue'
 import TopYT from '@/components/TopYT.vue'
+import Galery from '@/components/Galery.vue'
 
 
 export default {
   name: 'Okiem',
   components: {
-    TarloH1,RightBar,RightBarDown2,TopYT
+    TarloH1,RightBar,RightBarDown2,TopYT,Galery
   }
 }
 </script>
