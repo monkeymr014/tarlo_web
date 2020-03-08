@@ -20,9 +20,12 @@
     <div>
       <footer id="footer">
           <div id="footer-con">
-            <a target="_blank" @mouseover="grow = !grow" href="https://www.facebook.com/tarlorockband/"> <img alt="fb-footer" id="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg"> <img alt="yt-foter" id="yt-footer" src="./assets/socialmedia/yt/red.png"></a>
-            <a target="_blank" href=""> <img alt="insta-footer" id="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
+            <a @mouseover="growfb = true" @mouseleave="growfb = false"  :class="{grow: growfb}" target="_blank" href="https://www.facebook.com/tarlorockband/">
+              <img alt="fb-footer" id="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
+            <a @mouseover="growyt = true" @mouseleave="growyt = false"  :class="{grow: growyt}" target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg">
+              <img alt="yt-foter" id="yt-footer" src="./assets/socialmedia/yt/red.png"></a>
+            <a @mouseover="growinsta = true" @mouseleave="growinsta = false"  :class="{grow: growinsta}" target="_blank" href="">
+              <img alt="insta-footer" id="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
           </div>  
       </footer>
     </div>
@@ -30,8 +33,7 @@
 </template>
 
 <script>
-import LogoPre from '@/components/LogoPre.vue'
-
+  import LogoPre from '@/components/LogoPre.vue'
 
 export default {
   name: 'PreLoader',
@@ -41,15 +43,17 @@ export default {
   props: {
     msg: String
   },
+
    data() {
-    
     return{
       show:true,
-      grow:true
-
+      growfb:false,
+      growyt:false,
+      growinsta:false
 
     }
   },
+
   mounted(){
     this.showToggle()
   },
@@ -63,8 +67,11 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
+
+.grow{
+  transform: scale(1.05); 
+}
 
 #con{
   min-height:100%;  	
@@ -79,20 +86,18 @@ export default {
   position: fixed;
   left:0;
   padding:0;
-	bottom: 0;
+	bottom: .5px;
 	width: 100%;
   height: 50px;
   align-items: center;
   justify-content: center;
-
-  
 }
 
 #footer-con{
   position:relative;
   left:0;
   margin:0px 30px 1px 30px;
-  padding:3px;
+  padding:5px;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -104,7 +109,7 @@ export default {
   position:relative;
   padding:0px;
   width: 50px;
-  margin:1px 0 2px 0 ; 
+  margin:1px 1px 0px 1px ; 
   height: auto;
   background:black;	
 	

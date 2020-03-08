@@ -67,12 +67,11 @@ img {
   left: 0px;
   position: absolute;
   filter: blur(0.9px) brightness(0.9);  
-
 }
 
 .hovering{
   background: black;
-   border: 6px solid white;
+  border: 6px solid white;
   border-radius: 40px;
   position:absolute;
   margin:0px 0px 0px 0px;
