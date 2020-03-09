@@ -6,7 +6,7 @@
     </div>
   </transition>
     <div  id="nav">
-      <router-link  to="/tarlo">O Tarlo</router-link>
+      <router-link to="/tarlo">O Tarlo</router-link>
       <router-link to="/koncerty">Koncerty</router-link>
       <router-link to="/rzucuchem">Rzuć Uchem</router-link>
       <router-link to="/rzucokiem">Rzuć Okiem</router-link>
@@ -33,7 +33,8 @@
 </template>
 
 <script>
-  import LogoPre from '@/components/LogoPre.vue'
+
+import LogoPre from '@/components/LogoPre.vue'
 
 export default {
   name: 'PreLoader',
@@ -78,6 +79,8 @@ export default {
   min-width:100%;  	
   top:108px;
   position:fixed;
+   z-index:9;
+    overflow: hidden;
 }
 
 #footer{
@@ -101,6 +104,7 @@ export default {
   display:flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 #insta-footer , #fb-footer {
@@ -112,7 +116,6 @@ export default {
   margin:1px 1px 0px 1px ; 
   height: auto;
   background:black;	
-	
  }
 
 #yt-footer{
@@ -124,7 +127,6 @@ export default {
   margin:1px 0 10px 0 ; 
   height: auto;
   background:black;		
- 
 }
 
 //DESKTOP
@@ -135,7 +137,6 @@ export default {
     }
     font-size: 16px;
   top:0;
-
   right:0;
   text-align: center;
   color: white;
@@ -144,8 +145,7 @@ export default {
   width:85%;
   margin:20px 5% 20px 5%;
   position:fixed;
-  z-index:9;
-  overflow: hidden;
+  
 }
 
 #nav a {

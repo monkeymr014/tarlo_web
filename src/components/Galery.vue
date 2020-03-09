@@ -1,31 +1,61 @@
 <template>
   <div id="con" >
-    <div @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="video">KRONIKA FILMOWA</div>
-    <div @mouseover="growfoto = true" @mouseleave="growfoto = false"  :class="{grow: growfoto}" id="foto">KRONIKA ZDJĘCIOWA</div>
+    <gallery :images="images" :index="index" @close="index = null"  id="gallery" ></gallery>
+    <div @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="video">KRONIKA FILMOWA
+    </div>
+    <div @click="index = imageIndex" :style="{ backgroundImage: 'url(' + image + ')',  }" @mouseover="growfoto = true" @mouseleave="growfoto = false"  :class="{grow: growfoto}" id="foto">KRONIKA ZDJĘCIOWA</div>
   </div>
 </template>
 
 <script>
+
+import VueGallery from 'vue-gallery';
+
 export default {
-  name: 'Galery',
+name: 'Galery',
   data() {
     return {
       growfoto: false,
-      growvideo: false
+      growvideo: false,
+
+  images: [
+          'https://dummyimage.com/800/ffffff/000000',
+          'https://dummyimage.com/1600/ffffff/000000',
+          'https://dummyimage.com/1280/000000/ffffff',
+          'https://dummyimage.com/400/000000/ffffff',
+        ],
+        index: null
+
     }
-  }
+  },
+
+ components: {
+      'gallery': VueGallery
+    }
+
+
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .grow{
   transform: scale(1.05); 
+  z-index:9;
+    overflow: hidden;
+
 }
 div{
   text-align:center;
   font-size:37px;
   color:white;
+   z-index:8;
+    overflow: hidden;
+
+}
+
+#gallery{
+   z-index:9;
+    overflow: hidden; 
 }
 
 #con{
@@ -56,6 +86,8 @@ div{
   width:250px;
   height:180px;
   top:0px;
+  z-index:8;
+    overflow: hidden;
 }
 
 #video{
