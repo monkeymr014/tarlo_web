@@ -78,9 +78,7 @@ export default {
   min-height:100%;  	
   min-width:100%;  	
   top:108px;
-  position:fixed;
-   z-index:9;
-    overflow: hidden;
+  position:relative;
 }
 
 #footer{
@@ -94,6 +92,7 @@ export default {
   height: 50px;
   align-items: center;
   justify-content: center;
+  
 }
 
 #footer-con{
@@ -104,7 +103,7 @@ export default {
   display:flex;
   align-items: center;
   justify-content: center;
-  
+ 
 }
 
 #insta-footer , #fb-footer {
@@ -116,6 +115,7 @@ export default {
   margin:1px 1px 0px 1px ; 
   height: auto;
   background:black;	
+   
  }
 
 #yt-footer{
@@ -145,7 +145,6 @@ export default {
   width:85%;
   margin:20px 5% 20px 5%;
   position:fixed;
-  
 }
 
 #nav a {
