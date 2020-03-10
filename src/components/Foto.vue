@@ -1,8 +1,8 @@
 <template>
   <div>
       <gallery :images="images"  :index="index" @close="index = null"   ></gallery>
-        <div  @click="index = imageIndex" :style="{ backgroundImage: 'url(' + image + ')',  }"  @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="foto">
-        ZDJĘCIA
+        <div  @click="index = imageIndex"   @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="foto">
+        KRONIKA ZDJĘCIOWA
       </div>
     </div>
 </template>
@@ -18,8 +18,7 @@ name: 'Video',
       growvideo: false,
 
   images: [
-          'https://scontent.xx.fbcdn.net/v/t1.0-9/84000770_2387486251563365_5620931817486942208_o.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_oc=AQmG_VwHvD_AuMqBvQlkcbV0EnECpC5GAof4DIwlbKOWd3xKEXh2YhcfpraADMWgv4E&_nc_ht=scontent.xx&oh=881778573fa195fde55e0149ab38ba74&oe=5E915A5C'
-       
+          'https://scontent.xx.fbcdn.net/v/t1.0-9/84000770_2387486251563365_5620931817486942208_o.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_oc=AQmG_VwHvD_AuMqBvQlkcbV0EnECpC5GAof4DIwlbKOWd3xKEXh2YhcfpraADMWgv4E&_nc_ht=scontent.xx&oh=881778573fa195fde55e0149ab38ba74&oe=5E915A5C'       
         ],
         index: null
     }
@@ -28,8 +27,6 @@ name: 'Video',
  components: {
       'gallery': VueGallery,
     }
-
-
 }
 </script>
 
@@ -41,7 +38,6 @@ name: 'Video',
 
 }
 
-
 .image {
     float: left;
     background-size: cover;
@@ -50,7 +46,6 @@ name: 'Video',
     border: 1px solid #ebebeb;
     margin: 5px;
   }
-
 
 #foto{
     position:relative;

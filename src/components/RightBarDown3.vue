@@ -1,11 +1,11 @@
 <template>
   <div>
-      <span v-bind:style="[Items.red]">Produkcja muzyczna:</span><span> Maciek Gładysz</span><br/><br/>
-      <span v-bind:style="[Items.red]">Mix:</span><span> Marcin Gajko</span> <br/><br/>
+      <span v-bind:style="[Items.red]">Produkcja muzyczna:</span><span> Maciek Gładysz</span><br/>
+      <span v-bind:style="[Items.red]">Mix:</span><span> Marcin Gajko</span> <br/>
       <span v-bind:style="[Items.red]">Mastering:</span>
       <span>„Łysybył”, „Czy warto”  Michał Eprom Baj;  <br/>
-            „List” – Leszek Kamiński</span><br/><br/>
-      <span v-bind:style="[Items.red]">Realizacja nagrań perkusji:</span><span> Wojtek Olszak w Woobie Doobie Studio</span><br/><br/>
+            „List” – Leszek Kamiński</span><br/>
+      <span v-bind:style="[Items.red]">Realizacja nagrań perkusji:</span><span> Wojtek Olszak w Woobie Doobie Studio</span><br/>
       <span v-bind:style="[Items.red]">Realizacja nagrań gitar i vocalu:</span><span> Maciek Gładysz</span>
   </div>
 </template>
@@ -44,21 +44,21 @@ div{
   position:fixed;
   top:32%;
   right:35%;
-  padding:20px;
-  padding-top:50px;
+  padding:2px;
+  padding-top:26px;
+  text-align:center;
   width: 400px;
   height: 250px;
-   background: rgba(0,0,0,0.6);
-
+  background: rgba(0,0,0,0.6);
   border-radius: 58px 58px 58px 58px;
--moz-border-radius: 58px 58px 58px 58px;
--webkit-border-radius: 58px 58px 58px 58px;
-border: 1px solid #383838;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
 }
 
 span{ 
 
-  font-size:18px;
+  font-size:17px;
  color:white;
  padding:0px;
 }

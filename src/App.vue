@@ -133,9 +133,9 @@ export default {
 @media (min-width: 1024px){ 
 #nav {
   @media (min-width: 1285px){
-    font-size: 23px;
+    font-size: 20px;
     }
-    font-size: 16px;
+    font-size: 14px;
   top:0;
   right:0;
   text-align: center;

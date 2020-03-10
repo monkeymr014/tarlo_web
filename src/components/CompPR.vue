@@ -1,5 +1,5 @@
 <template>
-  <div id="content" >
+  <div id="con" >
     <div @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{hovering: hover1}" id="prespack">
       <img  src="../assets/pr/press-pack.jpg"/>
       <span>PRESS <br/> PACK <br/> DO POBRANIA</span>
@@ -14,14 +14,11 @@
     <div @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{hovering: hover4}" @click="logContent" id="riderin">
       <img  src="../assets/pr/rider-plenr.jpg"/>
       <span>RIDER <br/> TECHNICZNY <br/>PLENER</span>
-       <pdf
-            ref="myPdfComponent"
-            src="https://cdn.mozilla.net/pdfjs/tracemonkey.pdf"
-        ></pdf>
     </div>
+    
   </div>
 </template>
-1
+
 <script>
 
 import pdf from 'vue-pdf'
@@ -66,32 +63,27 @@ img {
   bottom: 0;
   left: 0px;
   position: absolute;
-  filter: blur(0.9px) brightness(0.9);  
+  filter: blur(0.9px) brightness(0.6);  
 }
 
 .hovering{
-  background: black;
-  border: 6px solid white;
-  border-radius: 40px;
-  position:absolute;
-  margin:0px 0px 0px 0px;
-  width:38%;
-  height:40%;
-  padding:10px;
-  color:red;
-  font-size:42px;
-  text-align:center;
+  transform: scale(1.08); 
+  
 }
 
 div {
-  border: 6px solid white;
-  border-radius: 40px;
+ position:relative;
+  background: rgba(0,0,0,0.6);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
+  padding:20px 0 0 0;
+  width:250px;
+  height:180px;
   position:absolute;
   margin:1% 1% 1% 1% ;
-  width:35%;
-  height:40%;
   overflow: hidden;
-
 }
 
 span{
@@ -101,14 +93,12 @@ span{
   width:100%;
   height:auto;
   color:white;
-  font-size:37px;
+  font-size:30px;
   text-align:center;
-
 }
                         
 #prespack{
  left:0px;
-  
 }
 #presinfo{
  left:0px;
@@ -116,32 +106,28 @@ span{
 }
 
 #riderout{
-  left:50%;
-  
-  
+  left:32%;  
 }
 
 #riderin{
-left:50%;
+left:32%;
 top:53%;
  
 }
 
-
-#content{
+#con{
   border:none;
+  background:none;
   position:fixed;
   left:18%;
   width:50%;
   height:50%;
-  top:30%;
-    overflow: visible;
-  
-
-  
+  top:25%;
+  overflow: visible;
 }
-p {
-background: rgba(0,0,0,0.6);
+
+p{
+  background: rgba(0,0,0,0.6);
   text-indent: 0%; 
   padding:2%;
   margin: 0 auto ;

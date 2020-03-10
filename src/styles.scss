@@ -1,7 +1,6 @@
-@font-face {
-    font-family: 'DryTransferFolio-Caps';
-    src: url('assets/fonts/DryTransferFolio-Caps.otf');
-}
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da|Dekko|Eater|Englebert|Finger+Paint|Kosugi|Lacquer|Nosifer|Slackey&display=swap');
+
 
 body {
     @media (min-width: 1024px) {
@@ -12,14 +11,21 @@ body {
         background-attachment: fixed;
         background-size: 100%;
     }
-}
+    
 
-body {
     @media (min-width: 1024px) {
-        font-family: 'DryTransferFolio-Caps';
     }
+   
+
+
 }
 
+#nav,h1{
+    font-family: 'Lacquer', cursive;
+}
+#con{
+    font-family: 'Baloo Da', cursive;
+}
 #video {
     position: relative;
     left: 50px;

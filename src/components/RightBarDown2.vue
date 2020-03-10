@@ -29,13 +29,13 @@ div{
   right:60px;
   width: 200px;
   height: 190px;
-  font-size:14px;
+  font-size:12px;
   }
 @media (min-width: 1226px){ 
   right:100px;
   width: 230px;
   height: 210px;
-  font-size:16px;
+  font-size:14px;
   }
   position:absolute;
   top: 200px;

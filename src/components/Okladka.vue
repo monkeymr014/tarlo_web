@@ -2,7 +2,7 @@
   <div id="content" >
             <img alt="logo-red" src="../assets/okladka.jpg">
             <p><span>Prolog</span><br/>
-           Łysybył<br/>
+            Łysybył<br/>
             Czy warto<br/>
             List</p>
 
@@ -33,7 +33,7 @@ div{
   left:2%;
   width:28%;
   height:50%;
-  top:32%;
+  top:30%;
 }
 
 img{

@@ -10,7 +10,7 @@ import Video from '@/components/Video.vue'
 import Foto from '@/components/Foto.vue'
 
 export default {
-name: 'Galery',
+name: 'Gallery',
  components: {
     Video,Foto
   }
@@ -34,8 +34,6 @@ div{
   top:120px;
   padding:0;
   margin:0;
-  border:solid;
-  border-color:red;
   display:flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;

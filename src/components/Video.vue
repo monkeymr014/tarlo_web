@@ -1,32 +1,37 @@
 <template>
   <div>
-        <div   @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="video">KRONIKA FILMOWA
-      </div>
-    </div>
+    <div @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="video">KRONIKA FILMOWA</div>
+  </div>
 </template>
 
 <script>
+
+import VuePlyr from 'vue-plyr'
 
 export default {
 name: 'Video',
   data() {
     return {
       growvideo: false,
-
     }
   },
-
-
-
+  computed:  {
+    player() {
+      return this.$refs.plyr.player
+    }
+  },
+  mounted () {
+    console.log(this.player)
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+
 .grow{
   transform: scale(1.05); 
   z-index:9;
-    overflow: hidden;
-
+  overflow: hidden;
 }
 
 
@@ -38,7 +43,6 @@ name: 'Video',
     border: 1px solid #ebebeb;
     margin: 5px;
   }
-
 
 #video{
     position:relative;
