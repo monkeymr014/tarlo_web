@@ -11,7 +11,7 @@
       <img  src="../assets/pr/news-pres.jpg"/>
       <span>A TAK JUŻ <br/> PISALI O TARŁO <br/> NA PORTALCH</span>
     </div>
-    <div @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{hovering: hover4}" @click="logContent" id="riderin">
+    <div @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{hovering: hover4}" id="riderin">
       <img  src="../assets/pr/rider-plenr.jpg"/>
       <span>RIDER <br/> TECHNICZNY <br/>PLENER</span>
     </div>
@@ -21,7 +21,6 @@
 
 <script>
 
-import pdf from 'vue-pdf'
 
 export default {
   name: 'CompPR',
@@ -29,9 +28,6 @@ export default {
     msg: String
 
   },
-   components: {
-        pdf
-        },
    data() {
     return {
       hover1: false,
@@ -40,17 +36,7 @@ export default {
       hover4: false,
     };
   },
-methods: {
-        logContent() {
-            this.$refs.myPdfComponent.pdf.forEachPage(function(page) {
-                return page.getTextContent()
-                .then(function(content) {
-                    var text = content.items.map(item => item.str);
-                    console.log(text);
-                })
-            });
-        }
-    }
+
 }
 </script>
 
