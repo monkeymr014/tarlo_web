@@ -1,11 +1,12 @@
 <template>
   <div id="content" >
             <img alt="logo-red" src="../assets/okladka.jpg">
-            <p><span>Prolog</span><br/>
-            Łysybył<br/>
-            Czy warto<br/>
-            List</p>
-
+            <div id="album">
+            <p><span>Prolog</span>
+            <p>Łysybył</p>
+            <p>Czy warto</p>
+            <p>List</p></p>
+</div>
   </div>
 </template>
 1
@@ -28,12 +29,33 @@ export default {
 
 <style lang="scss" scoped>
 
-div{
-  position:fixed;
+#album{
+  position:absolute;
+  background: rgba(0,0,0,0.8);
+  width:auto;
+  height:auto;
+  top:280px;
+  padding:0px 10px;
+  background: rgba(0,0,0,0.8);
+    border:  solid red;
+
+}
+
+
+
+
+#content{
+    display: flex;
+
+  position:relative;
   left:2%;
   width:28%;
-  height:50%;
-  top:30%;
+  margin:0;
+  padding:0;
+  height:auto;
+  top:120px;;
+   align-items: center;
+  justify-content: center;
 }
 
 img{
@@ -43,17 +65,18 @@ img{
   height:auto;
 }
 
-p{
+p{  
   text-align:center;
   color:red;
-  font-size:30px;
+  font-size:28px;
   padding:0;
-  margin:0;
+  margin:-15px 0 0 0 ;
+ 
 }
 
 span{
   text-align:center;
-  padding:0;
+  padding:0 0 0 0;
   color:red;
   font-size:45px;
 }

@@ -4,8 +4,8 @@
       <span v-bind:style="[Items.red]">Mix:</span><span> Marcin Gajko</span> <br/>
       <span v-bind:style="[Items.red]">Mastering:</span>
       <span>„Łysybył”, „Czy warto”  Michał Eprom Baj;  <br/>
-            „List” – Leszek Kamiński</span><br/>
-      <span v-bind:style="[Items.red]">Realizacja nagrań perkusji:</span><span> Wojtek Olszak w Woobie Doobie Studio</span><br/>
+                    „List” – Leszek Kamiński</span><br/>
+      <span v-bind:style="[Items.red]">Realizacja nagrań perkusji:</span><span> Wojtek Olszak</span><br/>
       <span v-bind:style="[Items.red]">Realizacja nagrań gitar i vocalu:</span><span> Maciek Gładysz</span>
   </div>
 </template>
@@ -43,13 +43,12 @@ h2{
 div{
   position:fixed;
   top:32%;
-  right:35%;
-  padding:2px;
+  right:30%;
+  padding:20px;
   padding-top:26px;
-  text-align:center;
-  width: 400px;
-  height: 250px;
-  background: rgba(0,0,0,0.6);
+  width: 500px;
+  height: auto;
+  background: rgba(0,0,0,0.8);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;
@@ -58,7 +57,7 @@ div{
 
 span{ 
 
-  font-size:17px;
+  font-size:18px;
  color:white;
  padding:0px;
 }

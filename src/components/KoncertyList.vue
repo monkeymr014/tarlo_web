@@ -4,8 +4,13 @@
   
     <ul>
       <li v-for=" item in results " v-bind:key="item.id">
-           <img  src="item.cover.source"/>
-        <span>{{ item.start_time.substring(0,10) }} :</span><span>{{ item.name }}</span><a :href="link+ item.id" target="_blank"> <img alt="fb-footer" src="../assets/socialmedia/fb/char.png"> </a><br/>
+        <table>
+          <tr> 
+            <td id="data">{{ item.start_time.substring(0,10) }} </td>|
+            <td id="name">{{ item.name }}</td>
+            <a :href="link+ item.id" target="_blank"> <img alt="fb-footer" src="../assets/socialmedia/fb/char.png"> </a><br/>
+          </tr>
+        </table>
       </li>
 </ul>
  </div>
@@ -41,7 +46,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
 img {
     position:absolute;
     left:90%;
@@ -52,26 +56,31 @@ img {
     background:white;	
  }
 
+#data{
+  color:red;
+  width:100px;
+}
+
+#name{
+margin-left:200px;
+}
 
 li{
-  color:red;
-  text-decoration:underline;
+  color:#666666;
   list-style:none;
   padding:-12px;
   margin:0;
 
 }
-span {
+td {
   padding: 0%;
   margin: 0;
   position:relative;
-  color:red;
-  top:5%;
-  left: 1%;
-  font-size: 22px;
+  color:white;
+  font-size: 18px;
 }
 div{
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.8);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;

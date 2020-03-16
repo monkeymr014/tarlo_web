@@ -30,21 +30,21 @@ div{
 
 p{
 @media (min-width: 1024px){ 
-  font-size: 17px;
+  font-size: 15px;
 }
 @media (min-width: 1226px){ 
-  font-size: 23px;
+  font-size: 18px;
 }
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.8);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;
   border: 1px solid #383838;
-  text-indent: 10%; 
+  text-indent: 50px; 
   padding: 3%;
   margin: 10px 15px;
-  color:red;
-  top:0px;
+  color:white;
+  top:20px;
   position: relative;
 }
 </style>
