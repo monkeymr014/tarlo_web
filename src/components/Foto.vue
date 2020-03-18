@@ -18,7 +18,9 @@ name: 'Video',
       growvideo: false,
 
   images: [
+          'https://scontent.xx.fbcdn.net/v/t1.0-9/84000770_2387486251563365_5620931817486942208_o.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_oc=AQmG_VwHvD_AuMqBvQlkcbV0EnECpC5GAof4DIwlbKOWd3xKEXh2YhcfpraADMWgv4E&_nc_ht=scontent.xx&oh=881778573fa195fde55e0149ab38ba74&oe=5E915A5C'   ,    
           'https://scontent.xx.fbcdn.net/v/t1.0-9/84000770_2387486251563365_5620931817486942208_o.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_oc=AQmG_VwHvD_AuMqBvQlkcbV0EnECpC5GAof4DIwlbKOWd3xKEXh2YhcfpraADMWgv4E&_nc_ht=scontent.xx&oh=881778573fa195fde55e0149ab38ba74&oe=5E915A5C'       
+
         ],
         index: null
     }
@@ -33,9 +35,6 @@ name: 'Video',
 <style lang="scss" scoped>
 .grow{
   transform: scale(1.05); 
-  z-index:9;
-    overflow: hidden;
-
 }
 
 .image {

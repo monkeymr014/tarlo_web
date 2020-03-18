@@ -1,12 +1,10 @@
 <template>
   <div>
-    <div @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="video">KRONIKA FILMOWA</div>
+    <div  @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="video">KRONIKA FILMOWA</div>
   </div>
 </template>
 
 <script>
-
-import VuePlyr from 'vue-plyr'
 
 export default {
 name: 'Video',
@@ -14,14 +12,6 @@ name: 'Video',
     return {
       growvideo: false,
     }
-  },
-  computed:  {
-    player() {
-      return this.$refs.plyr.player
-    }
-  },
-  mounted () {
-    console.log(this.player)
   }
 }
 </script>
@@ -34,18 +24,8 @@ name: 'Video',
   overflow: hidden;
 }
 
-
-.image {
-    float: left;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: 1px solid #ebebeb;
-    margin: 5px;
-  }
-
 #video{
-    position:relative;
+  position:relative;
   background: rgba(0,0,0,0.6);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;

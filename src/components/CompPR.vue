@@ -1,9 +1,6 @@
 <template>
   <div id="con" >
-    <div @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{hovering: hover1}" id="prespack">
-      <img  src="../assets/pr/press-pack.jpg"/>
-      <span>PRESS <br/> PACK <br/> DO POBRANIA</span>
-    </div>
+   
     <div @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{hovering: hover2}" id="riderout">
       <img  src="../assets/pr/rider-club.jpg"/>
       <span>RIDER <br/> TECHNICZNY <br/>KLUB</span></div>
@@ -15,11 +12,18 @@
       <img  src="../assets/pr/rider-plenr.jpg"/>
       <span>RIDER <br/> TECHNICZNY <br/>PLENER</span>
     </div>
+        <button @click="download" class="btn btn-primary">Download file</button>
+
     
   </div>
+
+
+
 </template>
 
 <script>
+
+import axios from 'axios';
 
 
 export default {
@@ -37,14 +41,31 @@ export default {
     };
   },
 
+
+ 
+       methods: {
+            download(){
+            axios({
+                    url: '/src/assets/Rider.pdf',
+                    method: 'GET',
+                    responseType: 'blob',
+                })
+                .then((res) => console.log(res.data))
+                .catch(err => console.log(err))
+            }
+        }
+
+
+
+
 }
 </script>
 
 <style lang="scss" scoped>
 
 img {
-  height: 100%;
-  width: 100%;
+  height: 110%;
+  width: auto;
   top: 0;
   bottom: 0;
   left: 0px;
@@ -63,13 +84,14 @@ div {
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;
-  border: 1px solid #383838;
+  border: 2px solid black;
   padding:20px 0 0 0;
-  width:250px;
-  height:180px;
+  width:220px;
+  height:150px;
   position:absolute;
-  margin:1% 1% 1% 1% ;
+  margin:0;
   overflow: hidden;
+  
 }
 
 span{
@@ -79,7 +101,7 @@ span{
   width:100%;
   height:auto;
   color:white;
-  font-size:30px;
+  font-size:28px;
   text-align:center;
 }
                         
@@ -106,20 +128,12 @@ top:53%;
   background:none;
   position:fixed;
   left:18%;
-  width:50%;
-  height:50%;
-  top:25%;
+  width:780px;
+  height:450px;
+  top:195px;
   overflow: visible;
 }
 
-p{
-  background: rgba(0,0,0,0.6);
-  text-indent: 0%; 
-  padding:2%;
-  margin: 0 auto ;
-  right: 40%;
-  font-size: 25px;
-  color:white;
-}
+
 
 </style>

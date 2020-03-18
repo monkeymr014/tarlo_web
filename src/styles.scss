@@ -1,7 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da|Dekko|Eater|Englebert|Finger+Paint|Kosugi|Lacquer|Nosifer|Slackey&display=swap');
-
-
 body {
     @media (min-width: 1024px) {
         background: black;
@@ -11,21 +8,18 @@ body {
         background-attachment: fixed;
         background-size: 100%;
     }
-    
-
-    @media (min-width: 1024px) {
-    }
-   
-
-
+    @media (min-width: 1024px) {}
 }
 
-#nav,h1{
+#nav,
+h1 {
     font-family: 'Lacquer', cursive;
 }
-#con{
+
+#con {
     font-family: 'Baloo Da', cursive;
 }
+
 #video {
     position: relative;
     left: 50px;
