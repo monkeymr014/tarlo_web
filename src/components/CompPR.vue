@@ -1,6 +1,9 @@
 <template>
   <div id="con" >
-   
+    <div @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{hovering: hover1}" id="prespack">
+      <img  src="../assets/pr/press-pack.jpg"/>
+      <span>PRESS <br/> PACK <br/> DO POBRANIA</span>
+    </div>
     <div @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{hovering: hover2}" id="riderout">
       <img  src="../assets/pr/rider-club.jpg"/>
       <span>RIDER <br/> TECHNICZNY <br/>KLUB</span></div>
@@ -11,10 +14,7 @@
     <div @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{hovering: hover4}" id="riderin">
       <img  src="../assets/pr/rider-plenr.jpg"/>
       <span>RIDER <br/> TECHNICZNY <br/>PLENER</span>
-    </div>
-        <button @click="download" class="btn btn-primary">Download file</button>
-
-    
+    </div>    
   </div>
 
 
@@ -46,7 +46,7 @@ export default {
        methods: {
             download(){
             axios({
-                    url: '/src/assets/Rider.pdf',
+                    url: 'http://www.africau.edu/images/default/sample.pdf',
                     method: 'GET',
                     responseType: 'blob',
                 })
