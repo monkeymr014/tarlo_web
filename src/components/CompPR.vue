@@ -16,15 +16,11 @@
       <span>RIDER <br/> TECHNICZNY <br/>PLENER</span>
     </div>    
   </div>
-
-
-
 </template>
 
 <script>
 
 import axios from 'axios';
-
 
 export default {
   name: 'CompPR',
