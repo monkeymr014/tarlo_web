@@ -1,6 +1,6 @@
 <template>
   <div id="content" >
-            <img alt="logo-red" src="../assets/okladka.jpg">
+            <img alt="logo-red" src="../assets/okladka-min.jpg">
             <div id="album">
             <p><span>Prolog</span>
             <p>Łysybył</p>
