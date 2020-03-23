@@ -26,16 +26,13 @@ export default {
     msg: String
   },
   data() {
-    
     return { 
       link: 'https://www.facebook.com/events/',
       results : []
       
     }
   },
-
-  computed: {
-                                                          // EAAEyl1RiMPcBAEUAUZAv0hc6zIDFjh91Xjd8zSls9PED5Rajx8ZBcyqa1KU12bDpk5Nn5YUjUpNFp8yBpJO6gteADnpSe933zoZAX8m5iQ4HBCBr648h2AK6NimH7SqYY5EJWi7A3AQjK9uCDXnLrqTmubk5dXMZA6EWskvEBgZDZD
+  computed: {                                                      // wiekuisty EAAEyl1RiMPcBAEUAUZAv0hc6zIDFjh91Xjd8zSls9PED5Rajx8ZBcyqa1KU12bDpk5Nn5YUjUpNFp8yBpJO6gteADnpSe933zoZAX8m5iQ4HBCBr648h2AK6NimH7SqYY5EJWi7A3AQjK9uCDXnLrqTmubk5dXMZA6EWskvEBgZDZD
     List: function() {                                    //EAAEyl1RiMPcBADqRTM1ccEXt9Kyih5D7t6HaiJb4O6zynGLZBhjUieTAg1DEGXLCQZArBoHB88CWvSp1lPU8EU9fr5TfxZCTRZBL2PPjYVw8y4f77SqgIDBzs5FPSWLdkYnpBfWnJl4ypZCwIfHgqyc9xwS35hRaZCf4XrGDeBNh4BJc3MDCozLXb8ZBQYGL5Sz4bvtIocyhgZDZD
       axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=events%7Bname%2Cstart_time%2Ccover%7D&access_token=EAAEyl1RiMPcBAEUAUZAv0hc6zIDFjh91Xjd8zSls9PED5Rajx8ZBcyqa1KU12bDpk5Nn5YUjUpNFp8yBpJO6gteADnpSe933zoZAX8m5iQ4HBCBr648h2AK6NimH7SqYY5EJWi7A3AQjK9uCDXnLrqTmubk5dXMZA6EWskvEBgZDZD')
         .then((re) => {

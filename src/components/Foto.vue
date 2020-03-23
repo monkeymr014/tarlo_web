@@ -2,70 +2,94 @@
   <div>
     <transition name="fade">
       <div v-if="show" id="gallery">
-        <lingallery :id.sync="currentId" :width="width" :height="height" :items="items"/>
-        <div v-on:click="show = !show" class="wrapper">
-          <a href="#" class="close-button">
-            <div class="in">
-              <div class="close-button-block"></div>
-              <div class="close-button-block"></div>
-            </div>
-            <div class="out">
-              <div class="close-button-block"></div>
-              <div class="close-button-block"></div>
-            </div>
-          </a>
+        <div id="albumcont" >
+          <div v-on:click="show2 = !show2" id="album" v-for="item in slides" v-bind:key="item.id">
+            <p>{{item.name}}</p>
+            <transition >
+              <div v-if="show2" id="gallery2">
+                
+              </div>
+            </transition>
+       <!-- <carousel-3d :count="slides.data.length">
+          <slide v-for="(slide, i) in slides.data" :index="i">
+            <img :src="slide.images[2].source" />
+          </slide>
+        </carousel-3d> -->
+        </div>
+        </div>
+      <div v-on:click="cli" class="wrapper">
+        <a href="#" class="close-button">
+          <div class="in">
+            <div class="close-button-block"></div>
+            <div class="close-button-block"></div>
+          </div>
+          <div class="out">
+            <div class="close-button-block"></div>
+            <div class="close-button-block"></div>
+          </div>
+        </a>
         </div>      
       </div>   
     </transition>
-    <div v-on:click="show = !show"  @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="foto">
+        <div v-on:click="show = !show, Foto()"  @mouseover="growfoto = true" @mouseleave="growfoto = false"  :class="{grow: growfoto}" id="foto">
         KRONIKA ZDJĘCIOWA
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
 
-  import Lingallery from 'lingallery';
+import { Carousel3d, Slide } from 'vue-carousel-3d';
+import axios from 'axios';
 
 export default {
 name: 'Foto',
   data() {
     return {
-      growvideo: false,
-        show:false,
-        width: 600,
-        height: 400,
-        items: [{
-          src: 'https://scontent.xx.fbcdn.net/v/t1.0-9/84000770_2387486251563365_5620931817486942208_o.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_oc=AQmG_VwHvD_AuMqBvQlkcbV0EnECpC5GAof4DIwlbKOWd3xKEXh2YhcfpraADMWgv4E&_nc_ht=scontent.xx&oh=881778573fa195fde55e0149ab38ba74&oe=5E915A5C',
-          thumbnail: 'https://picsum.photos/64/64/?image=0',
-          
-        },
-        {
-          src: 'https://picsum.photos/600/400/?image=10',
-          thumbnail: 'https://picsum.photos/64/64/?image=10'
-        },
-      ]
-      };
-    },
-    components: {
-      Lingallery
+      growfoto: false,
+      show:false,
+      show2:false,
+      slides: [] 
+
     }
+  },
+components: {
+    Carousel3d,
+    Slide
+  },
+computed: {
+    Foto: function() {
+      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=albums%7Bname%2Cphotos%7Bimages%7D%7D&access_token=EAAEyl1RiMPcBAEUAUZAv0hc6zIDFjh91Xjd8zSls9PED5Rajx8ZBcyqa1KU12bDpk5Nn5YUjUpNFp8yBpJO6gteADnpSe933zoZAX8m5iQ4HBCBr648h2AK6NimH7SqYY5EJWi7A3AQjK9uCDXnLrqTmubk5dXMZA6EWskvEBgZDZD')
+        .then((re) => {
+          this.slides = re.data.data[0].albums.data;
+          
+          console.log(re.data.data[0].albums);
+                    }) 
+                  }
+        },
+methods:{
+  cli: function (){
+      if(this.show == true && this.show2 == true) {
+        this.show2 = false
+        }
+        else if(this.show == true && this.show2 != true) {
+          this.show = false
+          };
+    } 
   }
+}
 </script>
 
 <style lang="scss" scoped>
-
-
 $button-size: 40px;
 $close-width: ($button-size / 10);
 .wrapper {
- position:fixed;
+ position:relative;
  left:95%;
  top:5%;
   width: 100vw;
   height: 100vh;
 }
-
 .close-button {
   display: block;
   width: $button-size;
@@ -146,22 +170,33 @@ $close-width: ($button-size / 10);
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.grow{
-  transform: scale(1.05); 
+#album{
+  position:relative;
+  top:5px;
+  margin:10px;
+  padding:0px;
+  left:5px;
+  right:5px;
+  bottom:5px;
+  height:300px;
+  width:300px;
+  background: green;
 }
 
+
+#albumcont{
+  position:fixed;
+  top:100px;
+  left:100px;
+  right:100px;
+  bottom:100px;
+  display:flex;
+  z-index:8;
+  overflow:hidden;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 
 #gallery{
   position:fixed;
@@ -172,15 +207,24 @@ $close-width: ($button-size / 10);
   background:red;
   width:100%;
   display:flex;
-  z-index:9;
-  overflow:hidden;
-
-  align-items: center;
-  justify-content: center;
+  z-index:8;
       background: rgba(63, 1, 1, 0.9);
+}
 
+#gallery2{
+  position:fixed;
+  top:100px;
+  left:100px;
+  right:100px;
+  bottom:100px;
+  background:blue;
+  
+  display:flex;
+  z-index:9;
+}
 
-
+.grow{
+  transform: scale(1.05); 
 }
 
 .image {
