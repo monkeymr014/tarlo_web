@@ -3,18 +3,17 @@
     <transition name="fade">
       <div v-if="show" id="gallery">
         <div id="albumcont" >
-          <div v-on:click="show2 = !show2" id="album" v-for="item in slides" v-bind:key="item.id">
-            <p>{{item.name}}</p>
+          <div v-on:click="show2 = !show2" id="album" v-for="(item, i) in album" :index="i" >
+            <p>{{item.name}} </p>
             <transition >
               <div v-if="show2" id="gallery2">
-                
+                <div v-for="(images, a) in item" :index="a"   id="album" >
+                              <p>{{images.data}} </p>
+
+                </div>
               </div>
             </transition>
-       <!-- <carousel-3d :count="slides.data.length">
-          <slide v-for="(slide, i) in slides.data" :index="i">
-            <img :src="slide.images[2].source" />
-          </slide>
-        </carousel-3d> -->
+
         </div>
         </div>
       <div v-on:click="cli" class="wrapper">
@@ -49,7 +48,15 @@ name: 'Foto',
       growfoto: false,
       show:false,
       show2:false,
-      slides: [] 
+      album:[{
+              name: 'Tarło',
+              data:'as'
+            },
+            {
+              name: 'Dupa' 
+          }
+            ],
+      fot: [] 
 
     }
   },
@@ -57,16 +64,6 @@ components: {
     Carousel3d,
     Slide
   },
-computed: {
-    Foto: function() {
-      axios.get('https://graph.facebook.com/v6.0/me/accounts?fields=albums%7Bname%2Cphotos%7Bimages%7D%7D&access_token=EAAEyl1RiMPcBAEUAUZAv0hc6zIDFjh91Xjd8zSls9PED5Rajx8ZBcyqa1KU12bDpk5Nn5YUjUpNFp8yBpJO6gteADnpSe933zoZAX8m5iQ4HBCBr648h2AK6NimH7SqYY5EJWi7A3AQjK9uCDXnLrqTmubk5dXMZA6EWskvEBgZDZD')
-        .then((re) => {
-          this.slides = re.data.data[0].albums.data;
-          
-          console.log(re.data.data[0].albums);
-                    }) 
-                  }
-        },
 methods:{
   cli: function (){
       if(this.show == true && this.show2 == true) {
@@ -81,6 +78,12 @@ methods:{
 </script>
 
 <style lang="scss" scoped>
+
+img{
+  height:100px;
+  width:100px;
+}
+
 $button-size: 40px;
 $close-width: ($button-size / 10);
 .wrapper {
@@ -173,14 +176,20 @@ $close-width: ($button-size / 10);
 #album{
   position:relative;
   top:5px;
-  margin:10px;
-  padding:0px;
+  margin:8px 8px 0 0 ;
+  padding:12px;
   left:5px;
   right:5px;
-  bottom:5px;
-  height:300px;
-  width:300px;
+  bottom:0px;
+  height:100px;
+  width:15%;
+  font-size:17px;
   background: green;
+background: rgba(0,0,0,0.6);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
 }
 
 
@@ -189,13 +198,14 @@ $close-width: ($button-size / 10);
   top:100px;
   left:100px;
   right:100px;
+  padding:0;
   bottom:100px;
   display:flex;
   z-index:8;
-  overflow:hidden;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
 }
 
 #gallery{
@@ -216,11 +226,10 @@ $close-width: ($button-size / 10);
   top:100px;
   left:100px;
   right:100px;
-  bottom:100px;
-  background:blue;
-  
+  bottom:100px;  
   display:flex;
   z-index:9;
+  background:blue;
 }
 
 .grow{
@@ -237,7 +246,7 @@ $close-width: ($button-size / 10);
   }
 
 #foto{
-    position:relative;
+  position:relative;
   background: rgba(0,0,0,0.6);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
