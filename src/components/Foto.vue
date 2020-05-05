@@ -5,10 +5,11 @@
         <div id="albumcont" >
           <div v-on:click="show2 = !show2" id="album" v-for="(item, i) in album" :index="i" >
             <p>{{item.name}} </p>
-            <transition >
+            <transition>
               <div v-if="show2" id="gallery2">
-                <div v-for="(images, a) in item" :index="a"   id="album" >
-                              <p>{{imagesssasss.data}} </p>
+                <div>
+                     <p>as</p>
+                  <silent-box :gallery="gallery"></silent-box>
 
                 </div>
               </div>
@@ -40,6 +41,8 @@
 
 import { Carousel3d, Slide } from 'vue-carousel-3d';
 import axios from 'axios';
+import VueSilentbox from 'vue-silentbox';
+
 
 export default {
 name: 'Foto',
@@ -56,13 +59,21 @@ name: 'Foto',
               name: 'Dupa' 
           }
             ],
-      fot: [] 
+    gallery: [
+        {
+            src: 'assets/tył.jpg',
+            description: 'Star Night Sky Ravine by Mark Basarab, from Unsplash.',
+            alt: 'Blue starry night photo.',
+            thumbnailWidth: '220px'
+        }
+    ]
 
     }
   },
 components: {
     Carousel3d,
-    Slide
+    Slide,
+    VueSilentbox
   },
 methods:{
   cli: function (){
