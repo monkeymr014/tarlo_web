@@ -4,17 +4,11 @@
       <div v-if="show" id="gallery">
         <div id="albumcont" >
           <div v-on:click="show2 = !show2" id="album" v-for="(item, i) in album" :index="i" >
-            <p>{{item.name}} </p>
-            <transition>
-              <div v-if="show2" id="gallery2">
-                <div>
-                     <p>as</p>
-                  <silent-box :gallery="gallery"></silent-box>
-
-                </div>
-              </div>
-            </transition>
-
+          <div >
+             <img class="image" v-for="(image, i) in images" :src="image" @click="index = i">
+            <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+            </div>
+         
         </div>
         </div>
       <div v-on:click="cli" class="wrapper">
@@ -39,9 +33,8 @@
 
 <script>
 
-import { Carousel3d, Slide } from 'vue-carousel-3d';
 import axios from 'axios';
-import VueSilentbox from 'vue-silentbox';
+import VueGallerySlideshow from 'vue-gallery-slideshow';
 
 
 export default {
@@ -59,21 +52,25 @@ name: 'Foto',
               name: 'Dupa' 
           }
             ],
-    gallery: [
-        {
-            src: 'assets/tył.jpg',
-            description: 'Star Night Sky Ravine by Mark Basarab, from Unsplash.',
-            alt: 'Blue starry night photo.',
-            thumbnailWidth: '220px'
-        }
-    ]
+    images: [
+      'https://placem.at/places?w=800&h=800&random=1',
+      'https://placem.at/places?w=800&h=600&random=1',
+      'https://placem.at/places?w=1200&h=400&random=2',
+      'https://placem.at/places?w=800&h=800&random=3',
+      'https://placem.at/places?w=600&h=800&random=4',
+      'https://placem.at/places?w=400&h=800&random=5',
+      'https://placem.at/places?w=800&h=800&random=6',
+      'https://placem.at/places?w=800&h=800&random=7',
+      'https://placem.at/places?w=800&h=800&random=8',
+      'https://placem.at/places?w=800&h=800&random=9',
+      'https://placem.at/places?w=800&h=800&random=10'
+    ],
+    index: null
 
     }
   },
 components: {
-    Carousel3d,
-    Slide,
-    VueSilentbox
+    VueGallerySlideshow
   },
 methods:{
   cli: function (){
