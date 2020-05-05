@@ -8,7 +8,7 @@
             <transition >
               <div v-if="show2" id="gallery2">
                 <div v-for="(images, a) in item" :index="a"   id="album" >
-                              <p>{{images.data}} </p>
+                              <p>{{imagesasss.data}} </p>
 
                 </div>
               </div>
