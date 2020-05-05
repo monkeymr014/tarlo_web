@@ -11,7 +11,7 @@
       <router-link to="/rzucuchem">Rzuć Uchem</router-link>
       <router-link to="/rzucokiem">Rzuć Okiem</router-link>
       <router-link to="/kontakt">Kontakt do Tarło</router-link>
-      <router-link to="/prasa&rider">Prasa i Rider</router-link>
+      <router-link to="/prasarider">Prasa i Rider</router-link>
       <router-link to="/kup">Kup sobie</router-link>
     </div>
     <div id="con" >
