@@ -1,8 +1,7 @@
 <template>
   <div id="con" >
     <div @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{hovering: hover1}" id="prespack">
-      <img  src="../assets/pr/press-pack.jpg"/>
-      <span>PRESS <br/> PACK <br/> DO POBRANIA</span>
+    <link rel="icon" href="<%= BASE_URL %>its_me.pdf">
     </div>
     <div @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{hovering: hover2}" id="riderout">
       <img  src="../assets/pr/rider-club.jpg"/>

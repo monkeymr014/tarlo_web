@@ -48,7 +48,7 @@ const routes = [{
 
     },
     {
-        path: '/prasa&rider',
+        path: '/prasarider',
         name: 'PR',
         component: PrasaRider
 

@@ -1,40 +1,51 @@
 <template>
   <div>
     <transition name="fade">
-      <div v-if="show" id="gallery">
+      <div v-if="show2" id="gallery2">
         <div id="albumcont" >
-          <div v-on:click="show2 = !show2" id="album" v-for="(item, i) in album" :index="i" >
-          <div >
-             <img class="image" v-for="(image, i) in images" :src="image" @click="index = i">
-            <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
-            </div>
-         
-        </div>
-        </div>
-      <div v-on:click="cli" class="wrapper">
-        <a href="#" class="close-button">
-          <div class="in">
-            <div class="close-button-block"></div>
-            <div class="close-button-block"></div>
+ <div>
+    <img id="fota"
+      v-for="(image, idx) in images"
+      :key="idx"
+      :src="image.thumbUrl" 
+      @click="showImage(idx) ,show3 = !show3"
+      :alt="image.caption"
+      :title="image.caption"
+      
+    />
+    <ImageBox
+      :images="images"
+      :index="index"
+        v-if="show3"
+      :bgcolor="bgcolor"
+    ></ImageBox>
+  </div>
+                
+ 
           </div>
-          <div class="out">
-            <div class="close-button-block"></div>
-            <div class="close-button-block"></div>
-          </div>
-        </a>
-        </div>      
-      </div>   
+          <div v-on:click="cli" v-if="show2"  class="wrapper">
+            <a href="#" class="close-button">
+            <div class="in">
+              <div class="close-button-block"></div>
+                <div class="close-button-block"></div>
+                </div>
+                <div class="out">
+                <div class="close-button-block"></div>
+                <div class="close-button-block"></div>
+              </div>
+            </a>
+            </div>      
+          </div>   
+    
     </transition>
-        <div v-on:click="show = !show, Foto()"  @mouseover="growfoto = true" @mouseleave="growfoto = false"  :class="{grow: growfoto}" id="foto">
-        KRONIKA ZDJĘCIOWA
-      </div>
+    <div v-on:click="show2 = !show2, Foto()"  @mouseover="growfoto = true" @mouseleave="growfoto = false"  :class="{grow: growfoto}" id="foto">
+    KRONIKA ZDJĘCIOWA
     </div>
+  </div>
 </template>
 
 <script>
-
-import axios from 'axios';
-import VueGallerySlideshow from 'vue-gallery-slideshow';
+import ImageBox from "vue-image-box";
 
 
 export default {
@@ -42,55 +53,66 @@ name: 'Foto',
   data() {
     return {
       growfoto: false,
-      show:false,
       show2:false,
-      album:[{
-              name: 'Tarło',
-              data:'as'
-            },
-            {
-              name: 'Dupa' 
-          }
-            ],
-    images: [
-      'https://placem.at/places?w=800&h=800&random=1',
-      'https://placem.at/places?w=800&h=600&random=1',
-      'https://placem.at/places?w=1200&h=400&random=2',
-      'https://placem.at/places?w=800&h=800&random=3',
-      'https://placem.at/places?w=600&h=800&random=4',
-      'https://placem.at/places?w=400&h=800&random=5',
-      'https://placem.at/places?w=800&h=800&random=6',
-      'https://placem.at/places?w=800&h=800&random=7',
-      'https://placem.at/places?w=800&h=800&random=8',
-      'https://placem.at/places?w=800&h=800&random=9',
-      'https://placem.at/places?w=800&h=800&random=10'
-    ],
-    index: null
+      show3:false,
+        index: null,
+      bgcolor: "rgba(51, 51, 51, .9)",
+      images: [
+        {
+          imageUrl : "http://www.tarlo.pl/img/ty%C5%82.f80db183.jpg",
+          thumbUrl: "http://www.tarlo.pl/img/ty%C5%82.f80db183.jpg",
+        },
+        {
+          imageUrl: "https://placekitten.com/825/600",
+          thumbUrl: "https://placekitten.com/825/600",
+        },
+        {
+          imageUrl: "https://placekitten.com/803/600",
+          thumbUrl: "https://placekitten.com/803/600",
+        }
+      ]
 
     }
   },
+
 components: {
-    VueGallerySlideshow
+
+ImageBox
   },
+
 methods:{
   cli: function (){
-      if(this.show == true && this.show2 == true) {
-        this.show2 = false
+      if(this.show2 == true && this.show3 == true) {
+        this.show3 = false && this.show2 == true 
         }
-        else if(this.show == true && this.show2 != true) {
-          this.show = false
+        else if(this.show2 == true && this.show3 == false) {
+          this.show2 = false
           };
-    } 
-  }
+    console.log(this.show2);
+    console.log(this.show3);
+    },
+    
+co:  function(){
+console.log(this.show2);
+    console.log(this.show3);
+},
+
+    showImage: function(idx) {
+      this.index = idx;
+    }
+}
 }
 </script>
 
 <style lang="scss" scoped>
 
-img{
-  height:100px;
-  width:100px;
+
+#fota{
+  width: 20%;
+  height: auto;
 }
+
+
 
 $button-size: 40px;
 $close-width: ($button-size / 10);
@@ -99,7 +121,8 @@ $close-width: ($button-size / 10);
  left:95%;
  top:5%;
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  z-index:9;
 }
 .close-button {
   display: block;
@@ -181,42 +204,33 @@ $close-width: ($button-size / 10);
   }
 }
 
-#album{
-  position:relative;
-  top:5px;
-  margin:8px 8px 0 0 ;
-  padding:12px;
-  left:5px;
-  right:5px;
-  bottom:0px;
-  height:100px;
-  width:15%;
-  font-size:17px;
-  background: green;
-background: rgba(0,0,0,0.6);
-  border-radius: 58px 58px 58px 58px;
-  -moz-border-radius: 58px 58px 58px 58px;
-  -webkit-border-radius: 58px 58px 58px 58px;
-  border: 1px solid #383838;
-}
+
+
+
+
+
+
+
+
+
+
 
 
 #albumcont{
   position:fixed;
-  top:100px;
-  left:100px;
-  right:100px;
+  top:10%;
+  left:10%;
+  right:10%;
   padding:0;
-  bottom:100px;
-  display:flex;
-  z-index:8;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  margin:0;
+  bottom:10%;
+  z-index:9;
+  border:solid;
+  border-color:blue;
 
 }
 
-#gallery{
+#gallery2{
   position:fixed;
   top:0;
   left:0;
@@ -224,34 +238,15 @@ background: rgba(0,0,0,0.6);
   bottom:0;
   background:red;
   width:100%;
-  display:flex;
   z-index:8;
       background: rgba(63, 1, 1, 0.9);
 }
 
-#gallery2{
-  position:fixed;
-  top:100px;
-  left:100px;
-  right:100px;
-  bottom:100px;  
-  display:flex;
-  z-index:9;
-  background:blue;
-}
 
 .grow{
   transform: scale(1.05); 
 }
 
-.image {
-    float: left;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: 1px solid #ebebeb;
-    margin: 5px;
-  }
 
 #foto{
   position:relative;
