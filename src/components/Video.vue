@@ -4,8 +4,10 @@
       <div v-if="show2" id="gallery2">
         <div id="albumcont" >
  
- 
- 
+
+       <iframe id="video"  src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe id="video"  src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
           </div>
           <div v-on:click="cli" v-if!="show2"  class="wrapper">
             <a href="#" class="close-button">
@@ -167,8 +169,7 @@ $close-width: ($button-size / 10);
   margin:0;
   bottom:10%;
   z-index:9;
-  border:solid;
-  border-color:blue;
+
 
 }
 
@@ -194,16 +195,12 @@ $close-width: ($button-size / 10);
 
 #video{
   position:relative;
-  background: rgba(0,0,0,0.6);
-  border-radius: 58px 58px 58px 58px;
-  -moz-border-radius: 58px 58px 58px 58px;
-  -webkit-border-radius: 58px 58px 58px 58px;
-  border: 1px solid #383838;
   padding:50px 0 0 0;
-  margin:0px;
+  margin:20px;
   width:250px;
   height:180px;
   top:0px;
+  border:none;
 }
 
 
