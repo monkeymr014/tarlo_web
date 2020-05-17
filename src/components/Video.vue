@@ -181,7 +181,7 @@ $close-width: ($button-size / 10);
   bottom:0;
   background:red;
   width:100%;
-  z-index:8;
+  z-index:9;
       background: rgba(63, 1, 1, 0.9);
 }
 
@@ -201,7 +201,11 @@ $close-width: ($button-size / 10);
   height:180px;
   top:0px;
   border:none;
+  background: rgba(0,0,0,0.6);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
 }
-
 
 </style>

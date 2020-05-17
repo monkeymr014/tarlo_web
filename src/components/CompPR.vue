@@ -1,9 +1,9 @@
 <template>
   <div id="con" >
-    <div @click="downloadWithVueResource" @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{hovering: hover1}" id="prespack">
+    <div @click="onClick()" @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{hovering: hover1}" id="prespack">
     <span>PRESS PACK<br/> DO <br/>POBRANIA</span>
     </div>
-    <div @click="downloadWithAxios" @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{hovering: hover2}" id="riderout">
+    <div  @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{hovering: hover2}" id="riderout">
       <span>RIDER <br/> TECHNICZNY <br/>KLUB</span></div>
     <div @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{hovering: hover3}" id="presinfo">
       <span>A TAK JUŻ <br/> PISALI O TARŁO <br/> NA PORTALCH</span>
@@ -16,6 +16,7 @@
 
 <script>
 
+import axios from 'axios';
 
 export default {
   name: 'CompPR',
@@ -29,55 +30,35 @@ export default {
       hover2: false,
       hover3: false,
       hover4: false,
-      url:'https://78.media.tumblr.com/tumblr_m39nv7PcCU1r326q7o1_500.png'
     };
   },
 
 
  methods: {
-    
-    forceFileDownload(response){
-      const url = window.URL.createObjectURL(new Blob([response.data]))
-      const link = document.createElement('a')
-      link.href = url
-      link.setAttribute('download', 'file.png') //or any other extension
-      document.body.appendChild(link)
-      link.click()
-    },
-    
-    downloadWithVueResource() {
-      
-      this.$http({
-        method: 'get',
-        url: this.url,
-        responseType: 'arraybuffer'
-      })
-      .then(response => {
-        this.forceFileDownload(response)  
-      })
-      .catch(() => console.log('error occured'))
-      
-    },
 
-    downloadWithAxios(){
-      axios({
-        method: 'get',
-        url: this.url,
-        responseType: 'arraybuffer'
-      })
-      .then(response => {
-        
-        this.forceFileDownload(response)
-        
-      })
-      .catch(() => console.log('error occured'))
-    }
+onClick2() {
+  console.log('asda');
+
+},
+    onClick() {
+              axios({
+                    url: 'http://www.tarlo.pl/img/ty%C5%82.f80db183.jpg',
+                    method: 'GET',
+                    responseType: 'blob',
+                }).then((response) => {
+                     var fileURL = window.URL.createObjectURL(new Blob([response.data]));
+                     var fileLink = document.createElement('a');
+   
+                     fileLink.href = fileURL;
+                     fileLink.setAttribute('download', 'file.jpg');
+                     document.body.appendChild(fileLink);
+   
+                     fileLink.click();
+                });
+          }
+    
  }
       
-
-
-
-
 }
 </script>
 
