@@ -1,14 +1,12 @@
 <template>
-  <div>
-  <transition name="fade">
+  <div >
+     <transition name="fade">
       <div v-if="show2" id="gallery2">
         <div id="albumcont" >
  
 
-       <iframe id="video"  src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       <iframe id="video"  src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-          </div>
+      
+        </div>
           <div v-on:click="cli" v-if!="show2"  class="wrapper">
             <a href="#" class="close-button">
             <div class="in">
@@ -24,24 +22,21 @@
           </div>   
     
     </transition>
-  
-    <div   v-on:click="show2 = !show2"    @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="video">KRONIKA FILMOWA</div>
-  </div>
+    <div v-on:click="show2 = !show2" @mouseover="growgadget = true" @mouseleave="growgadget = false"  :class="{grow: growgadget}" id="gadget">KUP <br/> GADŻETA TARŁO</div>
+</div>
 </template>
 
 <script>
 
-
 export default {
-name: 'Video',
-  data() {
-    return {
-      growvideo: false,
-      show2:false,
+name: 'Gadzet',
+ data() {
+    return { 
+      growgadget: false,
+      show2:false
     }
   },
-
-    methods:{
+   methods:{
        cli: function (){
       if(this.show2 == true && this.show3 == true) {
         this.show3 = false
@@ -51,7 +46,6 @@ name: 'Video',
           };
     }
 }
-
 }
 </script>
 
@@ -172,23 +166,29 @@ $close-width: ($button-size / 10);
 
 
 
+
+
 .grow{
   transform: scale(1.05); 
+  z-index:8;
+  overflow: hidden;
+
 }
 
-#video{
+
+
+#gadget{
   position:relative;
-  padding:50px 0 0 0;
-  margin:20px;
-  width:250px;
-  height:180px;
-  top:0px;
-  border:none;
   background: rgba(0,0,0,0.6);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;
   border: 1px solid #383838;
-}
+  padding:2px 0 0 0;
+  margin:17px;
+  width:250px;
+  height:200px;
+  top:0px;
 
+}
 </style>

@@ -1,16 +1,24 @@
 <template>
   <div id="con" >
+   <a href="../../assets/Rider.pdf" download>
     <div @click="onClick()" @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{hovering: hover1}" id="prespack">
     <span>PRESS PACK<br/> DO <br/>POBRANIA</span>
     </div>
+    </a>
+    <a href="../../assets/Rider.pdf" download>
     <div  @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{hovering: hover2}" id="riderout">
       <span>RIDER <br/> TECHNICZNY <br/>KLUB</span></div>
+    </a>
+    <a href="../../assets/Rider.pdf" download>
     <div @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{hovering: hover3}" id="presinfo">
       <span>A TAK JUŻ <br/> PISALI O TARŁO <br/> NA PORTALCH</span>
     </div>
+    </a>
+    <a href="../../assets/Rider.pdf" download>
     <div @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{hovering: hover4}" id="riderin">
       <span>RIDER <br/> TECHNICZNY <br/>PLENER</span>
     </div>    
+    </a>
   </div>
 </template>
 
