@@ -74,6 +74,12 @@ export default {
   transform: scale(1.05); 
 }
 
+
+
+
+
+
+
 #con{
   min-height:100%;  	
   min-width:100%;  	
@@ -81,6 +87,35 @@ export default {
   position:relative;
 }
 
+// mobile
+@media (max-width: 1024px){ 
+#footer{
+  display: none
+}
+#con{
+  height:auto;  	
+  width:100%;  	
+  top:10px;
+  position:static;
+  border:solid;
+}
+
+
+#nav{
+  border:solid;
+  border-color:red;
+  display:column;
+
+  justify-content: center;
+}
+#nav a {
+  color:black;
+    text-decoration: none;
+
+}
+
+}
+@media (min-width: 1024px){ 
 #footer{
   display: flex;
   clear: both;
@@ -103,6 +138,7 @@ export default {
   display:flex;
   align-items: center;
   justify-content: center;
+  
  
 }
 
@@ -130,7 +166,7 @@ export default {
 }
 
 //DESKTOP
-@media (min-width: 1024px){ 
+
 #nav {
   @media (min-width: 1285px){
     font-size: 20px;

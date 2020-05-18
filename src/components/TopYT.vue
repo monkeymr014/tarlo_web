@@ -20,6 +20,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
+
+ @media only screen and (max-width:1024px) {
+ div {
+ display: none
+  }
+}
+
 div{
   position:fixed;
   top:15px;
