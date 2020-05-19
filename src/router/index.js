@@ -68,3 +68,16 @@ const router = new VueRouter({
 })
 
 export default router
+import VueRouter from 'vue-router';
+
+VueRouter = new VueRouter(
+  {
+    routes: [
+      {
+        path:      '/',
+        name:      'index',
+        component: Index,
+      },
+    ],
+  },
+);

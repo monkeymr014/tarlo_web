@@ -1,14 +1,14 @@
 <template>
   <div>
   <transition name="fade">
-      <div v-if="show2" id="gallery2">
-        <div id="albumcont" >
- 
+      <div v-if="show2" id="galleryvideo">
+        <div id="cont">
+          <iframe  class="vi" src="https://www.youtube.com/watch?v=bBBh7pZOF3g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe  class="vi" src="https://www.youtube.com/watch?v=12A63fn1f2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe  class="vi" src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe  class="vi" src="https://www.youtube.com/watch?v=-mhA8CxIL74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-       <iframe id="video"  src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       <iframe id="video"  src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-          </div>
+        </div>
           <div v-on:click="cli" v-if!="show2"  class="wrapper">
             <a href="#" class="close-button">
             <div class="in">
@@ -22,7 +22,6 @@
             </a>
             </div>      
           </div>   
-    
     </transition>
   
     <div   v-on:click="show2 = !show2"    @mouseover="growvideo = true" @mouseleave="growvideo = false"  :class="{grow: growvideo}" id="video">KRONIKA FILMOWA</div>
@@ -43,15 +42,12 @@ name: 'Video',
 
     methods:{
        cli: function (){
-      if(this.show2 == true && this.show3 == true) {
-        this.show3 = false
+      if(this.show2 == true) {
+        this.show2 = false
         }
-        else if(this.show2 == true && this.show3 != true) {
-          this.show2 = false
-          };
-    }
 }
 
+}
 }
 </script>
 
@@ -66,6 +62,7 @@ $close-width: ($button-size / 10);
  top:5%;
   width: 100vw;
   height: 100vh;
+  z-index:9999;
 }
 .close-button {
   display: block;
@@ -147,18 +144,31 @@ $close-width: ($button-size / 10);
   }
 }
 
-#albumcont{
+
+.vi{
+  position:relative;
+  width:500px;
+  height:300px;
+  margin:0;
+  padding:10px;
+  
+}
+
+#cont{
   position:fixed;
   top:10%;
   left:10%;
   right:10%;
-  padding:0;
-  margin:0;
   bottom:10%;
-  z-index:9;
+  padding:0,0,0,0;
+  z-index:8;
+  max-width: 100%;
+  max-height: 100%;
+  
 }
+ 
 
-#gallery2{
+#galleryvideo{
   position:fixed;
   top:0;
   left:0;
@@ -166,8 +176,9 @@ $close-width: ($button-size / 10);
   bottom:0;
   background:red;
   width:100%;
-  z-index:9;
+  z-index:8;
   background: rgba(63, 1, 1, 0.9);
+ 
 }
 
 

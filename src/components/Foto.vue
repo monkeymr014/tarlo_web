@@ -3,26 +3,22 @@
     <transition name="fade">
       <div v-if="show2" id="gallery2">
         <div id="albumcont" >
- <div>
-    <img id="fota"
-      v-for="(image, idx) in images"
-      :key="idx"
-      :src="image.thumbUrl" 
-      @click="showImage(idx) ,show3 = !show3"
-      :alt="image.caption"
-      :title="image.caption"
-      
-    />
-    <ImageBox
+         <div id="row" >
+            <div class="column">
+             <img id="fota" v-for="(image, idx) in images" :key="idx" :src="image.thumbUrl" @click="showImage(idx) ,show3 = !show3" :alt="image.caption" :title="image.caption" />
+            </div>
+             
+          </div>
+
+ <div id="boximage"  >
+   <ImageBox 
       :images="images"
       :index="index"
         v-if="show3"
       :bgcolor="bgcolor"
     ></ImageBox>
-  </div>
-                
- 
-          </div>
+    </div>
+      </div>
           <div v-on:click="cli" v-if="show2"  class="wrapper">
             <a href="#" class="close-button">
             <div class="in">
@@ -34,8 +30,8 @@
                 <div class="close-button-block"></div>
               </div>
             </a>
-            </div>      
-          </div>   
+        </div>      
+  </div>   
     
     </transition>
     <div v-on:click="show2 = !show2, Foto()"  @mouseover="growfoto = true" @mouseleave="growfoto = false"  :class="{grow: growfoto}" id="foto">
@@ -59,17 +55,130 @@ name: 'Foto',
       bgcolor: "rgba(51, 51, 51, .9)",
       images: [
         {
-          imageUrl : "http://www.tarlo.pl/img/ty%C5%82.f80db183.jpg",
-          thumbUrl: "http://www.tarlo.pl/img/ty%C5%82.f80db183.jpg",
+          imageUrl : "http://serwer2072071.home.pl/gallery/002-81B_2677.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/002-81B_2677.jpg",
         },
         {
-          imageUrl: "https://placekitten.com/825/600",
-          thumbUrl: "https://placekitten.com/825/600",
+          imageUrl: "http://serwer2072071.home.pl/gallery/006-81A_2643.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/006-81A_2643.jpg",
         },
         {
-          imageUrl: "https://placekitten.com/803/600",
-          thumbUrl: "https://placekitten.com/803/600",
-        }
+          imageUrl: "http://serwer2072071.home.pl/gallery/016-81A_2667.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/016-81A_2667.jpg",
+        },
+          {
+          imageUrl: "http://serwer2072071.home.pl/gallery/064-81A_2729.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/064-81A_2729.jpg",
+        },
+          {
+          imageUrl: "http://serwer2072071.home.pl/gallery/069-81A_2741.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/069-81A_2741.jpg",
+        },
+          {
+          imageUrl: "http://serwer2072071.home.pl/gallery/267-81B_3032.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/267-81B_3032.jpg",
+        },
+       
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/171-81A_2941.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/171-81A_2941.jpg",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/40112798_1867680456655065_1784767114322640896_o.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/40112798_1867680456655065_1784767114322640896_o.jpg",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/40266587_1867681323321645_8921014602733453312_o.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/40266587_1867681323321645_8921014602733453312_o.jpg",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/245-81B_2965.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/245-81B_2965.jpg",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/163-81A_2918.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/163-81A_2918.jpg",
+        },
+
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/DSC_0292.JPG",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/DSC_0292.JPG",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/DSC_0333.JPG",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/DSC_0333.JPG",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/DSC_0373.JPG",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/DSC_0373.JPG",
+        },
+        {
+          imageUrl: "",
+          thumbUrl: "",
+        },
+        {
+          imageUrl: "",
+          thumbUrl: "",
+        },
+        {
+          imageUrl: "",
+          thumbUrl: "",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/284-DJI_0081.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/284-DJI_0081.jpg",
+        },
+        {
+          imageUrl: "",
+          thumbUrl: "",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/169-81A_2938.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/169-81A_2938.jpg",
+        },
+        
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/DSC_0423.JPG",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/DSC_0423.JPG",
+        },
+      
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/197-81B_2856.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/197-81B_2856.jpg",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/IMG_6828.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/IMG_6828.jpg",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/IMG_6852.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/IMG_6852.jpg",
+        },
+        {
+          imageUrl: "",
+          thumbUrl: "",
+        },
+        {
+          imageUrl: "",
+          thumbUrl: "",
+        },
+        {
+          imageUrl: "",
+          thumbUrl: "",
+        },
+        {
+          imageUrl: "",
+          thumbUrl: "",
+        },
+        {
+          imageUrl: "",
+          thumbUrl: "",
+        },
+        {
+          imageUrl: "http://serwer2072071.home.pl/gallery/199-81B_2863.jpg",
+          thumbUrl: "http://serwer2072071.home.pl/gallery/199-81B_2863.jpg",
+        },
+
       ]
 
     }
@@ -106,12 +215,56 @@ console.log(this.show2);
 
 <style lang="scss" scoped>
 
-
-#fota{
-  width: 20%;
-  height: auto;
+ 
+ .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
+/* Create four equal columns that sits next to each other */
+
+
+.column img {
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 10%;
+    max-width: 10%;
+  }
+}
+
+#fota{
+  width: 380px;
+  height: auto;
+  padding:0px,0px,0px,0px;
+  margin:0px,0,0,0;
+  max-width: 370px;
+
+  
+ @media screen and (max-width: 1200px) {
+    width: 380px;
+
+    max-width: 100%;
+        max-height: 100%;
+        width: 380px;
+  height: auto;
+
+  
+
+}
+}
 
 
 $button-size: 40px;
@@ -205,33 +358,23 @@ $close-width: ($button-size / 10);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 #albumcont{
   position:fixed;
   top:10%;
   left:10%;
   right:10%;
-  padding:0;
-  margin:0;
   bottom:10%;
-  z-index:9;
-  border:solid;
-  border-color:blue;
-
+  padding:0,0,0,0;
+  z-index:8;
+  overflow-y:scroll;
+ 
+max-width: 100%;
+        max-height: 100%;
 }
 
 #gallery2{
   position:fixed;
+  padding:0;
   top:0;
   left:0;
   right:0;
@@ -239,8 +382,11 @@ $close-width: ($button-size / 10);
   background:red;
   width:100%;
   z-index:8;
-      background: rgba(63, 1, 1, 0.9);
+  background: rgba(63, 1, 1, 0.9);
+  max-width: 100%;
+  max-height: 100%;
 }
+
 
 
 .grow{
