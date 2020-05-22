@@ -3,11 +3,10 @@
   <transition name="fade">
       <div v-if="show2" id="galleryvideo">
         <div id="cont">
-          <iframe  class="vi" src="https://www.youtube.com/watch?v=bBBh7pZOF3g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe  class="vi" src="https://www.youtube.com/watch?v=12A63fn1f2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe  class="vi" src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe  class="vi" src="https://www.youtube.com/watch?v=-mhA8CxIL74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+          <iframe class="vi" src="https://www.youtube.com/embed/bBBh7pZOF3g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="vi" src="https://www.youtube.com/embed/12A63fn1f2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="vi" src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="vi" src="https://www.youtube.com/embed/-mhA8CxIL74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
           <div v-on:click="cli" v-if!="show2"  class="wrapper">
             <a href="#" class="close-button">

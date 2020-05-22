@@ -11,3 +11,15 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
+
+
+new Vue({
+  router,
+  render: h => h(App),
+  mounted() {
+    Pace.start()
+    Pace.on('hide', () => {
+      document.dispatchEvent(new Event('app.rendered'));
+    })
+  }
+}).$mount('#app')

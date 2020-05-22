@@ -113,24 +113,8 @@ name: 'Foto',
           thumbUrl: "http://serwer2072071.home.pl/gallery/DSC_0373.JPG",
         },
         {
-          imageUrl: "",
-          thumbUrl: "",
-        },
-        {
-          imageUrl: "",
-          thumbUrl: "",
-        },
-        {
-          imageUrl: "",
-          thumbUrl: "",
-        },
-        {
           imageUrl: "http://serwer2072071.home.pl/gallery/284-DJI_0081.jpg",
           thumbUrl: "http://serwer2072071.home.pl/gallery/284-DJI_0081.jpg",
-        },
-        {
-          imageUrl: "",
-          thumbUrl: "",
         },
         {
           imageUrl: "http://serwer2072071.home.pl/gallery/169-81A_2938.jpg",
@@ -153,26 +137,7 @@ name: 'Foto',
         {
           imageUrl: "http://serwer2072071.home.pl/gallery/IMG_6852.jpg",
           thumbUrl: "http://serwer2072071.home.pl/gallery/IMG_6852.jpg",
-        },
-        {
-          imageUrl: "",
-          thumbUrl: "",
-        },
-        {
-          imageUrl: "",
-          thumbUrl: "",
-        },
-        {
-          imageUrl: "",
-          thumbUrl: "",
-        },
-        {
-          imageUrl: "",
-          thumbUrl: "",
-        },
-        {
-          imageUrl: "",
-          thumbUrl: "",
+  
         },
         {
           imageUrl: "http://serwer2072071.home.pl/gallery/199-81B_2863.jpg",

@@ -24,7 +24,7 @@
               <img alt="fb-footer" id="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
             <a @mouseover="growyt = true" @mouseleave="growyt = false"  :class="{grow: growyt}" target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg">
               <img alt="yt-foter" id="yt-footer" src="./assets/socialmedia/yt/red.png"></a>
-            <a @mouseover="growinsta = true" @mouseleave="growinsta = false"  :class="{grow: growinsta}" target="_blank" href="">
+            <a @mouseover="growinsta = true" @mouseleave="growinsta = false"  :class="{grow: growinsta}" target="_blank" href="https://www.instagram.com/tarlo_rockband/">
               <img alt="insta-footer" id="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
           </div>  
       </footer>

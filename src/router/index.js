@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Home from '../views/Home.vue'
 import Tarlo from '../views/Tarlo.vue'
 import Koncerty from '../views/Koncerty.vue'
@@ -68,16 +69,3 @@ const router = new VueRouter({
 })
 
 export default router
-import VueRouter from 'vue-router';
-
-VueRouter = new VueRouter(
-  {
-    routes: [
-      {
-        path:      '/',
-        name:      'index',
-        component: Index,
-      },
-    ],
-  },
-);
