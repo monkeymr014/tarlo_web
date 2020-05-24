@@ -5,7 +5,12 @@
       <LogoPre/>
     </div>
   </transition>
-    <div  id="nav">
+      <button class="hamburger" aria-label="Menu"  v-bind:class='{"hamburger--active" : isActive}' v-on:click="isActive = !isActive"  > 
+	      <span class="hamburger__container" tabindex="-1"> 
+    	    <span class="hamburger__bars"></span> 
+  	    </span> 
+      </button>
+    <div  id="nav">  
       <router-link to="/tarlo">O Tarlo</router-link>
       <router-link to="/koncerty">Koncerty</router-link>
       <router-link to="/rzucuchem">Rzuć Uchem</router-link>
@@ -34,6 +39,7 @@
 
 <script>
 
+
 import LogoPre from '@/components/LogoPre.vue'
 
 export default {
@@ -50,7 +56,8 @@ export default {
       show:true,
       growfb:false,
       growyt:false,
-      growinsta:false
+      growinsta:false,
+      isActive: false
 
     }
   },
@@ -64,6 +71,7 @@ export default {
           this.show = false;
       },11000);
     }
+    
   }
 }
 </script>
@@ -74,12 +82,6 @@ export default {
   transform: scale(1.05); 
 }
 
-
-
-
-
-
-
 #con{
   min-height:100%;  	
   min-width:100%;  	
@@ -89,6 +91,75 @@ export default {
 
 // mobile
 @media (max-width: 1024px){ 
+.hamburger {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  &:focus {
+    & > .hamburger__container {
+      box-shadow: 0 0 2px 2px #51a7e8;
+    }
+  }
+}
+
+.hamburger__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 35px;
+  height: 30px;
+}
+
+.hamburger__bars {
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #000;
+  transition: transform 220ms ease-in-out;
+  &:before, &:after {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color: #000;
+    content: '';
+  }
+  &:before {
+    top: -12px;
+    transition: top 100ms 250ms ease-in, transform 220ms ease-in-out;
+  }
+  &:after {
+    bottom: -12px;
+    transition: bottom 100ms 250ms ease-in, 
+      transform 220ms ease-in-out;
+  }
+}
+
+.hamburger--active {
+  .hamburger__bars {
+    transform: rotate(225deg);
+    transition: transform 220ms 120ms ease-in-out;
+    &:before {
+      top: 0;
+      transition: top 100ms ease-out;
+    }
+    &:after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 100ms ease-out, 
+        transform 220ms 120ms ease-in-out;
+    }
+  }
+}
+
+.hamburger, .hamburger__container {
+  &:focus {
+    outline: none;
+  }
+}
+
 #footer{
   display: none
 }
@@ -115,7 +186,14 @@ export default {
 }
 
 }
+
+//DESKTOP
+
 @media (min-width: 1024px){ 
+  
+.hamburger{
+    display: none;
+  }
 #footer{
   display: flex;
   clear: both;
@@ -165,7 +243,6 @@ export default {
   background:black;		
 }
 
-//DESKTOP
 
 #nav {
   @media (min-width: 1285px){
