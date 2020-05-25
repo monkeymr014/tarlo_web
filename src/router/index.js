@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Meta from 'vue-meta'
 
 import Home from '../views/Home.vue'
 import Tarlo from '../views/Tarlo.vue'
@@ -11,6 +12,12 @@ import PrasaRider from '../views/PrasaRider.vue'
 import Kup from '../views/Kup.vue'
 
 Vue.use(VueRouter)
+Vue.use(Meta, {
+    keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
+    attribute: 'data-vue-meta', // the attribute name vue-meta adds to the tags it observes
+    ssrAttribute: 'data-vue-meta-server-rendered', // the attribute name that lets vue-meta know that meta info has already been server-rendered
+    tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
+  })
 
 const routes = [{
         path: '/',
@@ -20,7 +27,8 @@ const routes = [{
     {
         path: '/tarlo',
         name: 'Tarlo',
-        component: Tarlo
+        component: Tarlo,
+        
     },
     {
         path: '/koncerty',
@@ -63,9 +71,36 @@ const routes = [{
 
 ]
 
+export default new Router({
+    path: '/',
+    name: 'Home',
+    component: Home,
+
+    metaInfo: {
+        meta: [
+              { name: 'description', content: 'Tarło - Oficjalna Strona Zespołu | Łysybył  | List | Autorska Muzyka | https://www.facebook.com/tarlorockband/' },
+              { name: 'keywords', content: "tarlo, zespół, Tarło, tarlo, muzyka, rock, kiedy, leszcza, w, ryb, u, okonia, szczupaka, legno, e, gurami, in, to, do, karpia, płoci, testa, danio, del, youtube, znachorka, jest, temperatura, amura, co, dorsza, lima, d'amor, cura, mordace, english, karasia, lina, minoga, neon, wody, pstrąga, asiatico, quanto, vive, quel, ma" }
+        ] ,
+       title: 'Tarło - Oficjalna Strona Zespołu',
+       htmlAttrs: {
+         lang: 'pl',
+         amp: true,
+         charset: 'utf-8',
+         },
+ 
+     }
+
+})
+  
+
+
 const router = new VueRouter({
-    mode: 'history',
-    routes
+    routes,
+    mode: 'history'
 })
 
-export default router
+new Vue({
+    router,
+    template: ''
+  })
+  .$mount('#app');

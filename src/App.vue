@@ -64,6 +64,19 @@ export default {
   props: {
     msg: String
   },
+     metaInfo: {
+       meta: [
+             { name: 'description', content: 'Tarło - Oficjalna Strona Zespołu | Łysybył  | List | Autorska Muzyka | https://www.facebook.com/tarlorockband/' },
+             { name: 'keywords', content: "tarlo, zespół, Tarło, tarlo, muzyka, rock, kiedy, leszcza, w, ryb, u, okonia, szczupaka, legno, e, gurami, in, to, do, karpia, płoci, testa, danio, del, youtube, znachorka, jest, temperatura, amura, co, dorsza, lima, d'amor, cura, mordace, english, karasia, lina, minoga, neon, wody, pstrąga, asiatico, quanto, vive, quel, ma" }
+       ] ,
+      title: 'Tarło - Oficjalna Strona Zespołu',
+      htmlAttrs: {
+        lang: 'pl',
+        amp: true,
+        charset: 'utf-8',
+        },
+
+    },
 
    data() {
     return{
@@ -111,7 +124,9 @@ export default {
 }
 
 // mobile
-@media (max-width: 1024px){ 
+@media (max-width: 1024px)
+{ 
+
 .hamburger {
   margin: 0;
   z-index:9999;
@@ -147,7 +162,7 @@ export default {
     position: absolute;
     width: 35px;
     height: 2px;
-    background-color::white;
+    background-color:white;
     content: '';
   }
   &:before {
@@ -185,8 +200,9 @@ export default {
 }
 
 #footer{
-  display: none
+  display: none;
 }
+
 #con{
    	
 	position: absolute;
@@ -257,9 +273,8 @@ export default {
 
 }
 
-
-
 }
+
 
 //DESKTOP
 
