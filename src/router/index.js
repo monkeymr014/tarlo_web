@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueMeta from 'vue-meta'
+
 
 import Home from '../views/Home.vue'
 import Tarlo from '../views/Tarlo.vue'
@@ -63,6 +65,9 @@ const routes = [{
 
 ]
 
+
+
+Vue.use(VueMeta);
 const router = new VueRouter({
     routes,
     mode: 'history'

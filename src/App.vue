@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-     <transition name="fade">
-        <div v-if="sshow" class="preloader">
-      <LogoPre/>
-    </div>
-  </transition>
-      <button class="hamburger" aria-label="Menu"  v-bind:class='{"hamburger--active" : isActive}' v-on:click="isActive = !isActive"  > 
+        <button class="hamburger" aria-label="Menu"  v-bind:class='{"hamburger--active" : isActive}' v-on:click="isActive = !isActive"  > 
 	      <span class="hamburger__container" tabindex="-1"> 
     	    <span class="hamburger__bars"></span> 
   	    </span> 
@@ -57,13 +52,9 @@
 <script>
 
 
-import LogoPre from '@/components/LogoPre.vue'
 
 export default {
-  name: 'PreLoader',
-  components: {
-    LogoPre
-  },
+  
   props: {
     msg: String
   },
