@@ -11,7 +11,8 @@
   	    </span> 
       </button>
     <div  id="nav"  class="nav" v-bind:class='{"navclose" : isActive}' >
-      <div id="link1" class="link" @mouseover="grow1 = true" @mouseleave="grow1 = false"  v-bind:class='{"linkmouse": grow1}' v-on:click="isActive = !isActive" >  
+      <h1 id="namemenu" >Menu</h1>
+      <div class="link" v-on:click="isActive = !isActive" >  
         <router-link   to="/tarlo">O Tarlo</router-link>
       </div>
       <div class="link"  v-on:click="isActive = !isActive">  
@@ -32,6 +33,8 @@
       <div class="link" v-on:click="isActive = !isActive">  
         <router-link to="/kup">Kup sobie</router-link>
       </div>
+            <img id="logomenu" alt="tarlo" src="./assets/logo_red_svg.svg">
+
     </div>
     <div id="con" >
       <router-view/>
@@ -108,12 +111,6 @@ export default {
 
 .grow{
   transform: scale(1.05); 
-  color:green;
-}
-
-.linkmouse {
-   background:red;
-   color:white;
 }
 
 #con{
@@ -203,23 +200,11 @@ export default {
   display: none;
 }
 
-#con{
-   	
-	position: absolute;
-  width: 100%; 
-	height: 100%;
-	top: 0px;
-  left: 0px;
-  bottom: 0;
-  margin: 0, 0,0,0;
-}
 
 
 .nav{
  position:fixed;
  left:-9999px;
- border:solid;
- border-color:red;
  
 
 }
@@ -236,7 +221,6 @@ export default {
   display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	justify-content: center;
 	align-items: center;
 	align-content: stretch;
 
@@ -245,14 +229,21 @@ export default {
   position:relative;
   top:0;
   margin:0;
-  border:solid;
-  border-color:rgb(151, 45, 45);
   width: 90%;
+  padding: 4px;
 
 
 }
-
-
+ #namemenu{
+   z-index:999;
+  color:white;
+ } 
+  #logomenu{
+    margin:15px;
+  width: 200px;
+  height: auto;
+  
+  }
 #nav a {
   text-decoration: none;  
   margin: 0;
@@ -269,7 +260,10 @@ export default {
 	align-items: center;
 	align-content: stretch;
   z-index: 4;
-
+  color:red;
+  border: 3px inset rgba(194,171,171,0.89);
+  border-radius: 40px 40px 40px 40px;
+  background: rgba(0,0,0,0.6);
 
 }
 
@@ -279,7 +273,12 @@ export default {
 //DESKTOP
 
 @media (min-width: 1024px){ 
-  
+  #logomenu{
+       display: none;
+  }
+ #namemenu{
+   display: none;
+ } 
 .hamburger{
     display: none;
   }

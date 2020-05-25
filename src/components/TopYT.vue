@@ -21,11 +21,7 @@ export default {
 <style lang="scss" scoped>
 
 
- @media only screen and (max-width:1024px) {
- div {
- display: none
-  }
-}
+ 
 
 div{
   position:fixed;

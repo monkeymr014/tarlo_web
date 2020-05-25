@@ -19,7 +19,8 @@ export default {
 <style lang="scss" scoped>
 div{
   @media  (max-width:1024px) {
- display: none
+
+  display: none;
   }
 
 @media (min-width: 1024px){ 

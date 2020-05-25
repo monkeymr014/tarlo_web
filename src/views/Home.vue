@@ -30,15 +30,15 @@ export default {
         charset: 'utf-8',
         },
 
-    },
+    }
 }
 </script>
 <style lang="scss" scoped>
 
- @media only screen and (max-width:1024px) {
-div{
+@media (max-width: 1024px){
+#video{
+  display: none;
+  }
 
- display: none;
-}
 }
 </style>
