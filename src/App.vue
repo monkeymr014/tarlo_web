@@ -10,14 +10,28 @@
     	    <span class="hamburger__bars"></span> 
   	    </span> 
       </button>
-    <div  id="nav">  
-      <router-link to="/tarlo">O Tarlo</router-link>
-      <router-link to="/koncerty">Koncerty</router-link>
-      <router-link to="/rzucuchem">Rzuć Uchem</router-link>
-      <router-link to="/rzucokiem">Rzuć Okiem</router-link>
-      <router-link to="/kontakt">Kontakt do Tarło</router-link>
-      <router-link to="/prasarider">Prasa i Rider</router-link>
-      <router-link to="/kup">Kup sobie</router-link>
+    <div  id="nav"  class="nav" v-bind:class='{"navclose" : isActive}' >
+      <div id="link1" class="link" @mouseover="grow1 = true" @mouseleave="grow1 = false"  v-bind:class='{"linkmouse": grow1}' v-on:click="isActive = !isActive" >  
+        <router-link   to="/tarlo">O Tarlo</router-link>
+      </div>
+      <div class="link"  v-on:click="isActive = !isActive">  
+        <router-link to="/koncerty">Koncerty</router-link>
+      </div>
+      <div class="link" v-on:click="isActive = !isActive">  
+        <router-link to="/rzucuchem">Rzuć Uchem</router-link>
+      </div>
+      <div class="link" v-on:click="isActive = !isActive">  
+        <router-link to="/rzucokiem">Rzuć Okiem</router-link>
+      </div>
+      <div class="link" v-on:click="isActive = !isActive">  
+        <router-link to="/kontakt">Kontakt do Tarło</router-link>
+      </div>
+      <div class="link" v-on:click="isActive = !isActive" >  
+        <router-link to="/prasarider">Prasa i Rider</router-link>
+      </div>
+      <div class="link" v-on:click="isActive = !isActive">  
+        <router-link to="/kup">Kup sobie</router-link>
+      </div>
     </div>
     <div id="con" >
       <router-view/>
@@ -54,6 +68,7 @@ export default {
    data() {
     return{
       show:true,
+      grow1:false,
       growfb:false,
       growyt:false,
       growinsta:false,
@@ -80,6 +95,12 @@ export default {
 
 .grow{
   transform: scale(1.05); 
+  color:green;
+}
+
+.linkmouse {
+   background:red;
+   color:white;
 }
 
 #con{
@@ -93,6 +114,7 @@ export default {
 @media (max-width: 1024px){ 
 .hamburger {
   margin: 0;
+  z-index:9999;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -110,20 +132,22 @@ export default {
   position: relative;
   width: 35px;
   height: 30px;
+    z-index:9999;
+
 }
 
 .hamburger__bars {
   position: absolute;
   width: 35px;
   height: 2px;
-  background-color: #000;
+  background-color:white;
   transition: transform 220ms ease-in-out;
   &:before, &:after {
     display: block;
     position: absolute;
     width: 35px;
     height: 2px;
-    background-color: #000;
+    background-color::white;
     content: '';
   }
   &:before {
@@ -164,26 +188,76 @@ export default {
   display: none
 }
 #con{
-  height:auto;  	
-  width:100%;  	
-  top:10px;
-  position:static;
-  border:solid;
+   	
+	position: absolute;
+  width: 100%; 
+	height: 100%;
+	top: 0px;
+  left: 0px;
+  bottom: 0;
+  margin: 0, 0,0,0;
 }
 
 
-#nav{
-  border:solid;
-  border-color:red;
-  display:column;
+.nav{
+ position:fixed;
+ left:-9999px;
+ border:solid;
+ border-color:red;
+ 
 
-  justify-content: center;
 }
+.navclose{
+  position: absolute;
+  z-index:99;
+  border:solid;
+  width: 100%; 
+	height: 100%;
+	top: 0px;
+  left: 0px;
+  bottom: 0;
+  background-color:black;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+
+}
+.link  {
+  position:relative;
+  top:0;
+  margin:0;
+  border:solid;
+  border-color:rgb(151, 45, 45);
+  width: 90%;
+
+
+}
+
+
 #nav a {
-  color:black;
-    text-decoration: none;
+  text-decoration: none;  
+  margin: 0;
+  padding: 0;
+  position:relative;
+  top:0;
+  width: 100%;
+  height:100%;
+  font-size:30px;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+  z-index: 4;
+
 
 }
+
+
 
 }
 
@@ -258,6 +332,12 @@ export default {
   width:85%;
   margin:20px 5% 20px 5%;
   position:fixed;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
 }
 
 #nav a {
@@ -275,5 +355,6 @@ export default {
   background: rgba(0,0,0,0.9);
   border: 3px outset rgba(194,171,171,0.89);
   }
+
 }
 </style>

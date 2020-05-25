@@ -8,8 +8,14 @@ body {
         background-attachment: fixed;
         background-size: 100%;
     }
-    @media (min-width: 1024px) {}
+    @media (max-width: 1024px) {
+        background: black;
+        background-size: 100%; 
+    }
 }
+
+
+
 
 #nav,
 h1 {
