@@ -1,20 +1,16 @@
 <template>
   <div id="con" >
-  <Gadzet/>
-  <Plyta/>
+  
 </div>
 </template>
 
 <script>
-import Gadzet from '@/components/Gadzet.vue'
-import Plyta from '@/components/Plyta.vue'
+
 
 
 export default {
 name: 'Buy',
- components: {
-    Gadzet,Plyta
-  }
+
 }
 </script>
 
