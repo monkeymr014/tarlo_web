@@ -28,8 +28,9 @@
       <div class="link" v-on:click="isActive = !isActive">  
         <router-link to="/kup">Kup sobie</router-link>
       </div>
+        <div id="conlogomenu">
             <img id="logomenu" alt="tarlo" src="./assets/logo_red_svg.svg">
-
+          </div>
     </div>
     <div id="con" >
       <router-view/>
@@ -104,12 +105,7 @@ export default {
   transform: scale(1.05); 
 }
 
-#con{
-  min-height:100%;  	
-  min-width:100%;  	
-  top:108px;
-  position:relative;
-}
+
 
 // mobile
 @media (max-width: 1024px)
@@ -191,7 +187,12 @@ export default {
   display: none;
 }
 
-
+#con{
+  max-height:99%;  	
+  max-width:90%;  	
+  position: static;
+  width:95%; margin-right:auto; margin-left:auto;
+}
 
 .nav{
  position:fixed;
@@ -228,16 +229,33 @@ export default {
  #namemenu{
    z-index:999;
   color:white;
+  font-size: 50px;
  } 
   #logomenu{
-    margin:15px;
+  margin:15px 0,0,0;
   width: 200px;
   height: auto;
   
+
+  
+  }
+  #conlogomenu{
+   display: flex;
+  clear: both;
+  position: fixed;
+  left:0;
+  padding:0;
+	bottom: .5px;
+	width: 100%;
+  height: 30%;
+  align-items: center;
+  justify-content: center;
+  border:solid;
+  border-color: red;
   }
 #nav a {
   text-decoration: none;  
-  margin: 0;
+  margin: 2% ,0,0,0;
   padding: 0;
   position:relative;
   top:0;
@@ -251,9 +269,7 @@ export default {
 	align-items: center;
 	align-content: stretch;
   z-index: 4;
-  color:red;
-  border: 3px inset rgba(194,171,171,0.89);
-  border-radius: 40px 40px 40px 40px;
+  color:tomato;
   background: rgba(0,0,0,0.6);
 
 }
@@ -264,6 +280,12 @@ export default {
 //DESKTOP
 
 @media (min-width: 1024px){ 
+  #con{
+  min-height:100%;  	
+  min-width:100%;  	
+  top:108px;
+  position:relative;
+}
   #logomenu{
        display: none;
   }
