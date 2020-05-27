@@ -6,26 +6,29 @@
   	    </span> 
       </button>
     <div  id="nav"  class="nav" v-bind:class='{"navclose" : isActive}' >
+         <span id="ytmenu">
+         <TopYT/> 
+</span>
       <h1 id="namemenu" >Menu</h1>
-      <div class="link" v-on:click="isActive = !isActive" >  
+      <div class="link" v-on:click="isActive = !isActive" @mouseover="grow1 = true" @mouseleave="grow1 = false"  :class="{grow: grow1}"  >  
         <router-link   to="/tarlo">O Tarlo</router-link>
       </div>
-      <div class="link"  v-on:click="isActive = !isActive">  
+      <div class="link"  v-on:click="isActive = !isActive" @mouseover="grow2 = true" @mouseleave="grow2 = false"  :class="{grow: grow2}">  
         <router-link to="/koncerty">Koncerty</router-link>
       </div>
-      <div class="link" v-on:click="isActive = !isActive">  
+      <div class="link" v-on:click="isActive = !isActive" @mouseover="grow3 = true" @mouseleave="grow3 = false"  :class="{grow: grow3}">  
         <router-link to="/rzucuchem">Rzuć Uchem</router-link>
       </div>
-      <div class="link" v-on:click="isActive = !isActive">  
+      <div class="link" v-on:click="isActive = !isActive" @mouseover="grow4 = true" @mouseleave="grow4 = false"  :class="{grow: grow4}">  
         <router-link to="/rzucokiem">Rzuć Okiem</router-link>
       </div>
-      <div class="link" v-on:click="isActive = !isActive">  
+      <div class="link" v-on:click="isActive = !isActive" @mouseover="grow5 = true" @mouseleave="grow5 = false"  :class="{grow: grow5}">  
         <router-link to="/kontakt">Kontakt do Tarło</router-link>
       </div>
-      <div class="link" v-on:click="isActive = !isActive" >  
+      <div class="link" v-on:click="isActive = !isActive" @mouseover="grow6 = true" @mouseleave="grow6 = false"  :class="{grow: grow6}">  
         <router-link to="/prasarider">Prasa i Rider</router-link>
       </div>
-      <div class="link" v-on:click="isActive = !isActive">  
+      <div class="link" v-on:click="isActive = !isActive" @mouseover="grow7 = true" @mouseleave="grow7 = false"  :class="{grow: grow7}">  
         <router-link to="/kup">Kup sobie</router-link>
       </div>
         <div id="conlogomenu">
@@ -51,11 +54,15 @@
 </template>
 
 <script>
+import TopYT from '@/components/TopYT.vue'
 
-
+  
 
 export default {
-  
+  components: {
+  TopYT
+  },
+
   props: {
     msg: String
   },
@@ -77,6 +84,12 @@ export default {
     return{
       show:true,
       grow1:false,
+      grow2:false,
+      grow3:false,
+      grow4:false,
+      grow5:false,
+      grow6:false,
+      grow7:false,
       growfb:false,
       growyt:false,
       growinsta:false,
@@ -105,11 +118,9 @@ export default {
   transform: scale(1.05); 
 }
 
+// Mobile
 
-
-// mobile
-@media (max-width: 1024px)
-{ 
+@media (max-width: 1024px){ 
 
 .hamburger {
   margin: 0;
@@ -185,27 +196,30 @@ export default {
 
 #footer{
   display: none;
-}
+  }
 
 #con{
-  max-height:99%;  	
-  max-width:90%;  	
+  max-height:100%;  	
+  max-width:100%;  	
   position: static;
-  width:95%; margin-right:auto; margin-left:auto;
-}
+  width:100%; margin-right:auto; margin-left:auto;
+  position:fixed;
+  }
 
 .nav{
  position:fixed;
  left:-9999px;
- 
+  }
 
-}
 .navclose{
-  position: absolute;
+  position: fixed;
+  margin-right:0; 
+  margin-left:0;
+  margin-bottom:auto;
   z-index:99;
   border:solid;
-  width: 100%; 
-	height: 100%;
+  width: 98.5%; 
+	height: 99%;
 	top: 0px;
   left: 0px;
   bottom: 0;
@@ -214,54 +228,69 @@ export default {
 	flex-direction: column;
 	flex-wrap: nowrap;
 	align-items: center;
-	align-content: stretch;
+  align-content: stretch;
+  border:solid;
+  border-color:#330000	;
+  }
 
-}
+.navclose::after{
+  content:'';
+  background-image: url(./assets/tyl_mobile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 300%;
+  opacity: 0.4;
+  top: -10px;
+  left: -10px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  }
+
 .link  {
   position:relative;
   top:0;
   margin:0;
   width: 90%;
   padding: 4px;
+  }
 
-
-}
  #namemenu{
    z-index:999;
   color:white;
   font-size: 50px;
- } 
-  #logomenu{
-  margin:15px 0,0,0;
-  width: 200px;
-  height: auto;
-  
+  margin:5%;
+  } 
 
-  
+#logomenu{
+  width: 200px;
+  height: auto; 
   }
-  #conlogomenu{
-   display: flex;
+
+#conlogomenu{
+  display: flex;
   clear: both;
   position: fixed;
   left:0;
   padding:0;
-	bottom: .5px;
+	bottom: .4px;
 	width: 100%;
-  height: 30%;
+  height: 24%;
   align-items: center;
   justify-content: center;
-  border:solid;
-  border-color: red;
   }
+
 #nav a {
   text-decoration: none;  
-  margin: 2% ,0,0,0;
-  padding: 0;
+  margin: 0% ,0,0,0;
+  padding: 1px;
   position:relative;
   top:0;
   width: 100%;
   height:100%;
-  font-size:30px;
+  font-size:29px;
   display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -271,15 +300,20 @@ export default {
   z-index: 4;
   color:tomato;
   background: rgba(0,0,0,0.6);
-
-}
-
+  border-radius: 29px 29px 29px 29px;
+  -moz-border-radius: 29px 29px 29px 29px;
+  -webkit-border-radius: 29px 29px 29px 29px;
+  border: 2px solid #000000;
+  }
 }
 
 
 //DESKTOP
 
 @media (min-width: 1024px){ 
+#ytmenu{
+  display:none;
+}
   #con{
   min-height:100%;  	
   min-width:100%;  	

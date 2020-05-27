@@ -27,18 +27,15 @@ export default {
   position:fixed;
   top:12px;
   left:80%;
-  width: 20%;
-  height: 100px;
-  z-index: 9999;
+  width: 72px;
+  height: auto;
+  z-index: 3;
   overflow: hidden;
+  
 
 }   
 
-img{
-  max-width: 80%;
-  height: auto;
-  position: absolute;
-}
+
 
 
 }
@@ -54,7 +51,7 @@ div{
 img{
   max-width: 80%;
   height: auto;
-  position: absolute;
+  position: relative;
 }
 
 </style>
