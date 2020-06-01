@@ -1,9 +1,12 @@
 <template>
   <div>
+    <div id="h1">
+      <h1>Oficjalna Strona zepołu Tarło</h1>
+    </div>
     <div id="home">
       <iframe id="video" width="660" height="415" src="https://www.youtube.com/embed/MmIm4uo06TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <RightBar/> 
+    <RightBar/>
     <TopYT/> 
   </div>
 </template>
@@ -38,8 +41,20 @@ export default {
 @media (max-width: 1024px){
 #video{
   display: none;
-  }
-
 
 }
+#h1 {
+  font-size: 31px;
+  color:whitesmoke;
+  text-align: center;
+}
+
+}
+
+@media (min-width: 1024px){
+ #h1 {
+  display: none;
+} 
+}
+
 </style>

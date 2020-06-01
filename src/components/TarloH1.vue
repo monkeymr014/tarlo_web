@@ -17,26 +17,26 @@ export default {
 <style  lang="scss" scoped>
 @media (max-width: 1024px){ 
 h1 {
-  background-color: black;
+  
   position: relative;
   text-align: left;
-  color:red;
-  margin: 0px auto;
-  padding:1px 10px;
+  color:white;
+  margin: 0px, 30px, 0 ,0 ;
+  padding:0px 0px;
   font-size: 40px;
+  text-align: center;
+
   }
 
 
 div{
-  position: absolute;
-  top:12px;
-  width:auto;
+  position: fixed;
+  top:42px;
+  width:100%;
   height:auto;
-  left:20%;
+  left:0%;
   margin:0;
   padding:0px;
- 
-  
 }
 }
 @media (min-width: 1024px){ 

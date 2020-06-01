@@ -17,7 +17,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@media (max-width: 1024px){ 
 
+div{
+position: relative;
+margin-right: 20px;
+margin-top:50px;
+
+padding: 2px;
+    overflow-y:scroll;
+
+
+}
+p{
+text-indent: 20px;
+font-size: 12px;
+    background: rgba(0,0,0,0.8);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
+  padding: 22px;
+  color:white;
+  top:20px;
+  position: relative;
+
+}
+}
+
+@media (min-width: 1024px){ 
 div{
   position:relative;
   top:90px;
@@ -27,14 +55,28 @@ div{
   width:60%;
   height:auto; 
 }
+}
 
-p{
 @media (min-width: 1024px){ 
+p{
+
   font-size: 15px;
+    background: rgba(0,0,0,0.8);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
+  text-indent: 50px; 
+  padding: 3%;
+  margin: 10px 15px;
+  color:white;
+  top:20px;
+  position: relative;
+}
 }
 @media (min-width: 1226px){ 
+p{
   font-size: 18px;
-}
   background: rgba(0,0,0,0.8);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
@@ -46,5 +88,6 @@ p{
   color:white;
   top:20px;
   position: relative;
+}
 }
 </style>

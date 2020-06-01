@@ -32,6 +32,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
+
 .grow{
   transform: scale(1.05); 
 }
@@ -41,6 +42,9 @@ h2{
 }
 
 div{
+@media (max-width: 1024px){ 
+display: none;
+}  
 @media (min-width: 1024px){ 
   right:60px;
   width: 200px;

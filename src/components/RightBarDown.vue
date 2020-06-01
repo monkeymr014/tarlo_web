@@ -63,6 +63,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
+
+
+@media (max-width: 1024px){ 
+div{
+display: none;
+}
+
+
+}
 #maciek{
   padding:10px 0 0 0 ;
 }

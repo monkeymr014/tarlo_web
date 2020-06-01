@@ -7,8 +7,9 @@
         <table>
           <tr> 
             <td id="data">{{ item.start_time.substring(0,10) }} </td>|
+            <a :href="link+ item.id" target="_blank">
             <td id="name">{{ item.name }}</td>
-            <a :href="link+ item.id" target="_blank"> <img alt="fb-footer" src="../assets/socialmedia/fb/char.png"> </a><br/>
+             <img alt="fb-footer" src="../assets/socialmedia/fb/char.png"> </a><br/>
           </tr>
         </table>
       </li>
@@ -44,6 +45,59 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+a {
+  text-decoration: none;
+}
+@media (max-width: 1024px){ 
+img {
+display: none; }
+
+
+#data{
+  left:30px;
+  color:red;
+  width:50px;
+  padding: -10px;
+  
+}
+
+#name{
+margin-left:50px;
+}
+
+li{
+  color:#666666;
+  list-style:none;
+  margin:0;
+padding: -10px;
+}
+td {
+  padding: -10px;
+  margin: 0;
+  position: absolute;;
+  color:white;
+  font-size: 9px;
+}
+div{
+  background: rgba(0,0,0,0.8);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
+  position:fixed;
+  left:2%;
+  width:90%;
+  height:auto;
+  top:20%;
+  padding:0;
+  padding-bottom: 50px;
+  margin:10px;
+  
+}
+}
+
+
+@media (min-width: 1024px){ 
 img {
     position:absolute;
     left:90%;
@@ -91,5 +145,6 @@ div{
   padding:0;
   margin:0;
   
+}
 }
 </style>

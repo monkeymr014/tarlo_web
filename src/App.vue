@@ -31,9 +31,11 @@
       <div class="link" v-on:click="isActive = !isActive" @mouseover="grow7 = true" @mouseleave="grow7 = false"  :class="{grow: grow7}">  
         <router-link to="/kup">Kup sobie</router-link>
       </div>
-        <div id="conlogomenu">
+        <div id="conlogomenu"  >
             <img id="logomenu" alt="tarlo" src="./assets/logo_red_svg.svg">
+          
           </div>
+    
     </div>
     <div id="con" >
       <router-view/>
@@ -42,11 +44,11 @@
       <footer id="footer">
           <div id="footer-con">
             <a @mouseover="growfb = true" @mouseleave="growfb = false"  :class="{grow: growfb}" target="_blank" href="https://www.facebook.com/tarlorockband/">
-              <img alt="fb-footer" id="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
+              <img alt="facebook" id="fb-footer" src="./assets/socialmedia/fb/blue.png"></a>
             <a @mouseover="growyt = true" @mouseleave="growyt = false"  :class="{grow: growyt}" target="_blank" href="https://www.youtube.com/channel/UCAK10cFtn2SoFgZu-TsP1Tg">
-              <img alt="yt-foter" id="yt-footer" src="./assets/socialmedia/yt/red.png"></a>
+              <img alt="youtube" id="yt-footer" src="./assets/socialmedia/yt/red.png"></a>
             <a @mouseover="growinsta = true" @mouseleave="growinsta = false"  :class="{grow: growinsta}" target="_blank" href="https://www.instagram.com/tarlo_rockband/">
-              <img alt="insta-footer" id="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
+              <img alt="instagram" id="insta-footer" src="./assets/socialmedia/instagram/orange.png"></a>
           </div>  
       </footer>
     </div>
@@ -195,16 +197,63 @@ export default {
 }
 
 #footer{
-  display: none;
-  }
+   display: flex;
+  clear: both;
+  position: fixed;
+  left:0;
+  padding:0;
+	bottom: .5px;
+	width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+#footer-con{
+  position:relative;
+  left:0;
+  margin:0px 30px 0px 30px;
+  padding:5px;
+  display:flex;
+  align-items: center;
+  justify-content: center; 
+  overflow: hidden;
+}
+
+#insta-footer , #fb-footer {
+  border:solid;
+  border-color:black;
+  position:relative;
+  padding:0px;
+  width: 50px;
+  margin:1px 1px 0px 1px ; 
+  height: auto;
+  background:black;	
+   
+ }
+
+#yt-footer{
+  border:solid;
+  border-color:black;
+  position:relative;
+  padding:0px;
+  width: 60px;
+  margin:1px 0 10px 0 ; 
+  height: auto;
+  background:black;		
+}
+
+
 
 #con{
-  max-height:100%;  	
   max-width:100%;  	
   position: static;
   width:100%; margin-right:auto; margin-left:auto;
   position:fixed;
-  }
+ margin-bottom:50px;
+ }
 
 .nav{
  position:fixed;
@@ -272,7 +321,6 @@ export default {
 #conlogomenu{
   display: flex;
   clear: both;
-  position: fixed;
   left:0;
   padding:0;
 	bottom: .4px;
@@ -280,8 +328,11 @@ export default {
   height: 24%;
   align-items: center;
   justify-content: center;
-  }
+     z-index:999;
 
+  }
+  
+  
 #nav a {
   text-decoration: none;  
   margin: 0% ,0,0,0;
