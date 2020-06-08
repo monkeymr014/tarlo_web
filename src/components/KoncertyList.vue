@@ -1,12 +1,12 @@
 <template>
   <div>
-  <p>{{List}}</p>
+  <span>{{List}}</span>
   
     <ul>
       <li v-for=" item in results " v-bind:key="item.id">
         <table>
           <tr> 
-            <td id="data">{{ item.start_time.substring(0,10) }} </td>|
+            <td id="data">{{ item.start_time.substring(0,10) }} </td>
             <a :href="link+ item.id" target="_blank">
             <td id="name">{{ item.name }}</td>
              <img alt="fb-footer" src="../assets/socialmedia/fb/char.png"> </a><br/>
@@ -52,31 +52,34 @@ a {
 img {
 display: none; }
 
-
 #data{
-  left:30px;
   color:red;
-  width:50px;
-  padding: -10px;
-  
+  width:55px;
 }
 
 #name{
-margin-left:50px;
+margin-left:200px;
+font-size: 8px;;
 }
 
+
+ul{
+  position: relative;
+  left:-15px;
+}
 li{
   color:#666666;
   list-style:none;
+  
   margin:0;
-padding: -10px;
+
 }
 td {
-  padding: -10px;
+  padding: 0%;
   margin: 0;
-  position: absolute;;
+  position:relative;
   color:white;
-  font-size: 9px;
+  font-size: 10px;
 }
 div{
   background: rgba(0,0,0,0.8);
@@ -87,10 +90,9 @@ div{
   position:fixed;
   left:2%;
   width:90%;
-  height:auto;
-  top:20%;
+  height:20%;
+  top:15%;
   padding:0;
-  padding-bottom: 50px;
   margin:10px;
   
 }
@@ -137,10 +139,11 @@ div{
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;
   border: 1px solid #383838;
-  position:fixed;
+  position:relative;
   left:2%;
   width:70%;
   height:auto;
+  overflow: hidden;
   top:30%;
   padding:0;
   margin:0;
