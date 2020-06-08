@@ -31,12 +31,13 @@ h1 {
 
 div{
   position: fixed;
-  top:42px;
+  top:2px;
   width:100%;
   height:auto;
   left:0%;
   margin:0;
   padding:0px;
+ 
 }
 }
 @media (min-width: 1024px){ 

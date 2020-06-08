@@ -19,23 +19,7 @@ export default {
 <style lang="scss" scoped>
   @media  (max-width:1024px) {
 div{
-  position: fixed;
-  width: 10px;
-  height: auto; 
-  display: flex;
-  clear: both;
-  left:0;
-  padding:0;
-  top:0px;
-	width: 100%;
-  height: 80px;
-  align-items: center;
-  justify-content: center;
-  
-    }
-    img{
-      width: 100px;
-      height: auto;
+  display: none;
     }
   }
 

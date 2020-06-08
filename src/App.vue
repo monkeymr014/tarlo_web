@@ -141,7 +141,7 @@ export default {
 .hamburger__container {
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
   width: 35px;
   height: 30px;
     z-index:9999;
@@ -219,7 +219,7 @@ export default {
   display:flex;
   align-items: center;
   justify-content: center; 
-  overflow: hidden;
+
 }
 
 #insta-footer , #fb-footer {
@@ -227,8 +227,8 @@ export default {
   border-color:black;
   position:relative;
   padding:0px;
-  width: 50px;
-  margin:1px 1px 0px 1px ; 
+  width: 40px;
+  margin:1px 1px -10px 1px ; 
   height: auto;
   background:black;	
    
@@ -239,20 +239,19 @@ export default {
   border-color:black;
   position:relative;
   padding:0px;
-  width: 60px;
-  margin:1px 0 10px 0 ; 
+  width: 50px;
+  margin:1px 0 0px 0 ; 
   height: auto;
   background:black;		
 }
 
 
 
-#con{
+#app{
   max-width:100%;  	
-  position: static;
+  position: relative;
   width:100%; margin-right:auto; margin-left:auto;
-  position:fixed;
- margin-bottom:50px;
+  position: relative;;
  }
 
 .nav{

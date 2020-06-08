@@ -21,17 +21,19 @@ export default {
 
 div{
 position: relative;
-margin-right: 20px;
-margin-top:50px;
-
+margin-top:40px;
+margin-bottom: 30px;
 padding: 2px;
-    overflow-y:scroll;
+  
+
 
 
 }
 p{
+
 text-indent: 20px;
-font-size: 12px;
+
+font-size: 11px;
     background: rgba(0,0,0,0.8);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
