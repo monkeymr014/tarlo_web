@@ -1,20 +1,19 @@
 <template>
-  <div>
+<div>
+  <div id="con">
   <span>{{List}}</span>
-  
     <ul>
       <li v-for=" item in results " v-bind:key="item.id">
-        <table>
           <tr> 
             <td id="data">{{ item.start_time.substring(0,10) }} </td>
             <a :href="link+ item.id" target="_blank">
             <td id="name">{{ item.name }}</td>
              <img alt="fb-footer" src="../assets/socialmedia/fb/char.png"> </a><br/>
           </tr>
-        </table>
       </li>
-</ul>
+    </ul>
  </div>
+</div>
 </template>
  
 <script>
@@ -81,16 +80,16 @@ td {
   color:white;
   font-size: 10px;
 }
-div{
+#con{
   background: rgba(0,0,0,0.8);
   border-radius: 58px 58px 58px 58px;
-  -moz-border-radius: 58px 58px 58px 58px;
-  -webkit-border-radius: 58px 58px 58px 58px;
+
   border: 1px solid #383838;
   position:fixed;
+  overflow-y: scroll;
   left:2%;
   width:90%;
-  height:20%;
+  height:70%;
   top:15%;
   padding:0;
   margin:10px;
@@ -133,18 +132,18 @@ td {
   color:white;
   font-size: 18px;
 }
-div{
+#con{
   background: rgba(0,0,0,0.8);
   border-radius: 58px 58px 58px 58px;
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;
   border: 1px solid #383838;
-  position:relative;
+  position:fixed;
   left:2%;
   width:70%;
   height:auto;
-  overflow: hidden;
-  top:30%;
+  overflow-y: scroll;
+  top:25%;
   padding:0;
   margin:0;
   

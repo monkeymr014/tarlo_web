@@ -34,6 +34,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
+
+@media (max-width: 1024px){ 
+div{
+  display:none;
+}
+}
+
+
+@media (min-width: 1024px){ 
+
 h2{
   color:white;
   text-align: center;
@@ -67,5 +78,6 @@ img{
   height:auto;
   padding:5px;
 
+}
 }
 </style>

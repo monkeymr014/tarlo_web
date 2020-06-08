@@ -23,8 +23,9 @@ h1 {
   color:white;
   margin: 0px, 30px, 0 ,0 ;
   padding:0px 0px;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
+  
 
   }
 

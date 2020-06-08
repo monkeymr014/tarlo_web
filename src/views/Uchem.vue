@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TarloH1 msg="Rzuć Uchem"/> 
+    <TarloH1 msg="Rzuć  Uchem"/> 
     <RightBar/>
     <Okladka/>
     <RightBarDown3/>
