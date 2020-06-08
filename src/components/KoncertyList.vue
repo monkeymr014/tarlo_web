@@ -1,7 +1,10 @@
 <template>
+
 <div>
   <div id="con">
   <span>{{List}}</span>
+  <div>
+  
     <ul>
       <li v-for=" item in results " v-bind:key="item.id">
           <tr> 
@@ -138,12 +141,13 @@ td {
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;
   border: 1px solid #383838;
-  position:fixed;
+  position:relative;
   left:2%;
   width:70%;
   height:auto;
   overflow-y: scroll;
   top:25%;
+
   padding:0;
   margin:0;
   
