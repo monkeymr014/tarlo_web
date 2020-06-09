@@ -206,7 +206,7 @@ console.log(this.show2);
 @media screen and (max-width: 600px) {
   .column {
     flex: 10%;
-    max-width: 10%;
+    max-width: 90%;
   }
 }
 
@@ -219,7 +219,7 @@ console.log(this.show2);
 
   
  @media screen and (max-width: 1200px) {
-    width: 380px;
+    width: 80px;
 
     max-width: 100%;
         max-height: 100%;
@@ -231,9 +231,23 @@ console.log(this.show2);
 }
 }
 
+  $button-size: 40px;
+  $close-width: ($button-size / 10);
+@media (max-width: 1024px){ 
 
-$button-size: 40px;
-$close-width: ($button-size / 10);
+.wrapper {
+ position:relative;
+ left:85%;
+ top:10%;
+  width: 100vw;
+  height: auto;
+  z-index:9;
+}
+}
+
+@media (min-width: 1024px){ 
+
+
 .wrapper {
  position:relative;
  left:95%;
@@ -242,7 +256,7 @@ $close-width: ($button-size / 10);
   height: auto;
   z-index:9;
 }
-.close-button {
+}.close-button {
   display: block;
   width: $button-size;
   height: $button-size;
@@ -323,6 +337,55 @@ $close-width: ($button-size / 10);
 }
 
 
+@media (max-width: 1024px){ 
+#foto{
+  position:fixed;
+  background: rgba(0,0,0,0.6);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
+  padding-top:20px  ;
+  padding-bottom:40px;
+  margin:0;
+  width:200px;
+  height:70px;
+  top:320px;
+  left:50%;
+  transform: translate(-50%, -50%)
+  
+
+}
+#gallery2{
+  position:fixed;
+  padding:0;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:red;
+  width:100%;
+  z-index:8;
+  background: rgba(63, 1, 1, 0.9);
+  max-width: 100%;
+  max-height: 100%;
+}
+#albumcont{
+  position:fixed;
+  top:20%;
+  left:20%;
+  right:10%;
+  bottom:10%;
+  padding:0,0,0,0;
+  z-index:8;
+  overflow-y:scroll;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+}
+@media (min-width: 1024px){ 
+
 #albumcont{
   position:fixed;
   top:10%;
@@ -332,9 +395,8 @@ $close-width: ($button-size / 10);
   padding:0,0,0,0;
   z-index:8;
   overflow-y:scroll;
- 
-max-width: 100%;
-        max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #gallery2{
@@ -371,5 +433,6 @@ max-width: 100%;
   width:250px;
   height:180px;
   top:0px;
+}
 }
 </style>

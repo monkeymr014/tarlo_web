@@ -1,6 +1,6 @@
 <template>
   <div>
-   <TarloH1 msg="Kontakt Do Tarło"/>
+   <TarloH1 msg="Kontakt do Tarło"/>
    <CompKontakt/>
    <RightBar/>
    <RightBarDown2/>

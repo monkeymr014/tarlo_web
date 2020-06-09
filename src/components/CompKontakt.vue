@@ -36,6 +36,46 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@media (max-width: 1024px){ 
+
+
+ td {
+ padding:3px 2px 0 0 ;
+}
+.red{
+  font-size: 20px;
+  color:red;
+}
+span{
+ color: #383838;
+ padding:3px
+}
+div{
+  position:relative;
+  left:2%;
+  width:80%;
+  top:120px;
+  background: rgba(0,0,0,0.9);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
+  padding: 20px;
+  font-size: 15px;
+  color:white;
+
+}
+
+p{
+  margin: 0  ;
+  color:red;
+  right: 40%;
+  font-size: 40px;
+  color:white;
+}
+}
+@media (min-width: 1024px){ 
+
 
  td {
  padding:0px 20px 0 0 ;
@@ -70,5 +110,5 @@ p{
   font-size: 40px;
   color:white;
 }
-
+}
 </style>

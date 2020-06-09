@@ -2,15 +2,15 @@
   <div id="content" >
             <img alt="logo-red" src="../assets/okladka-min.jpg">
             <div id="album">
-            <p><span>Prolog</span>
+            <p><span>Prolog</span></p>
             <p>Łysybył</p>
             <p>Czy warto</p>
-            <p>List</p></p>
+            <p>List</p>
 </div>
-<div class="mobile"><h2>Posłuchaj</h2></div>
-  </div>
+
+</div>
 </template>
-1
+
 <script>
 export default {
   name: 'CompPR',
@@ -24,21 +24,18 @@ export default {
 
 #content{
   position:fixed;
-  left:50%;
-  transform: translate(-50%, -50%) ;
-  top:45%;
+  left:21%;
+    transform: translate(-50%, -50%) ;
+  top:50%;
   padding:0;
   width:50%;
   height:auto;
-    border:  solid red;
-
 }
 
 #album{
   position:relative;
   background: rgba(0,0,0,0.8);
   margin:  35px 0 0 0 ;
-  padding:0;
   width:100px;
   height:auto;
   left: 50%;
@@ -78,12 +75,12 @@ img{
 
 
 #album{
-  position:absolute;
+  position:relative;
   background: rgba(0,0,0,0.8);
-  width:auto;
+  width:30%;
   height:auto;
-  top:280px;
-  padding:0px 10px;
+  top:0px;
+  padding:10px 10px;
   background: rgba(0,0,0,0.8);
     border:  solid red;
 
@@ -93,15 +90,14 @@ img{
 
 
 #content{
-    display: flex;
 
-  position:relative;
-  left:2%;
+  position:fixed;
+  left:14%;
   width:28%;
   margin:0;
   padding:0;
   height:auto;
-  top:120px;;
+  top:55%;
    align-items: center;
   justify-content: center;
 }

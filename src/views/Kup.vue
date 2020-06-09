@@ -1,6 +1,6 @@
 <template>
   <div>
-   <TarloH1 msg="Kup Sobie Nie Żałuj"/> 
+   <TarloH1 msg="Kup Sobie  Nie Żałuj"/> 
    <RightBar/>
    <RightBarDown2/>
     <TopYT/>

@@ -23,7 +23,7 @@ h1 {
   color:white;
   margin: 0px, 30px, 0 ,0 ;
   padding:0px 0px;
-  font-size: 30px;
+  font-size: 32px;
   text-align: center;
   
 
@@ -33,9 +33,9 @@ h1 {
 div{
   position: fixed;
   top:2px;
-  width:100%;
+  width:70%;
   height:auto;
-  left:0%;
+  left:11%;
   margin:0;
   padding:0px;
  

@@ -19,6 +19,30 @@ name: 'Gallery',
 </script>
 
 <style lang="scss" scoped>
+
+@media (max-width: 1024px){ 
+div{
+  text-align:center;
+  font-size:30px;
+  color:white;
+}
+
+
+#con{
+  position:fixed;
+  left:2%;
+  width:90%;
+  height:200px;
+  top:50px;
+  padding:0;
+  margin:0;
+
+}
+}
+
+
+@media (min-width: 1024px){ 
+
 div{
   text-align:center;
   font-size:37px;
@@ -39,5 +63,6 @@ div{
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
+}
 }
 </style>

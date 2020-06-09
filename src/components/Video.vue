@@ -52,16 +52,31 @@ name: 'Video',
 
 <style lang="scss" scoped>
 
+ $button-size: 40px;
+  $close-width: ($button-size / 10);
+@media (max-width: 1024px){ 
 
-$button-size: 40px;
-$close-width: ($button-size / 10);
+.wrapper {
+ position:relative;
+ left:85%;
+ top:10%;
+  width: 100vw;
+  height: auto;
+  z-index:9;
+}
+}
+
+@media (min-width: 1024px){ 
+
+
 .wrapper {
  position:relative;
  left:95%;
  top:5%;
   width: 100vw;
-  height: 100vh;
-  z-index:9999;
+  height: auto;
+  z-index:9;
+}
 }
 .close-button {
   display: block;
@@ -144,6 +159,79 @@ $close-width: ($button-size / 10);
 }
 
 
+@media (max-width: 1024px){ 
+
+.vi{
+  position:relative;
+  width:240px;
+  height:150px;
+  margin:0;
+  padding:10px;
+  
+}
+
+#cont{
+  position:fixed;
+  top:10%;
+  left:10%;
+  right:5%;
+  bottom:10%;
+  padding:0,0,0,0;
+  z-index:8;
+  max-width: 100%;
+  max-height: 100%;
+    overflow-y:scroll;
+
+}
+ 
+
+#galleryvideo{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:red;
+  width:100%;
+  z-index:8;
+  background: rgba(63, 1, 1, 0.9);
+  top:0;
+  left:0%;
+ 
+}
+
+
+
+.grow{
+  transform: scale(1.05); 
+}
+
+#video{
+   position:relative;
+  background: rgba(0,0,0,0.6);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
+  padding-top:20px  ;
+  padding-bottom:30px;
+  margin:0;
+  width:200px;
+  height:80px;
+  top:120px;
+  left:53%;
+  transform: translate(-50%, -50%)
+  
+
+}
+
+}
+
+
+
+
+@media (min-width: 1024px){ 
+
 .vi{
   position:relative;
   width:500px;
@@ -200,5 +288,5 @@ $close-width: ($button-size / 10);
   -webkit-border-radius: 58px 58px 58px 58px;
   border: 1px solid #383838;
 }
-
+}
 </style>

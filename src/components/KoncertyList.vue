@@ -13,9 +13,11 @@
             <td id="name">{{ item.name }}</td>
              <img alt="fb-footer" src="../assets/socialmedia/fb/char.png"> </a><br/>
           </tr>
+    
       </li>
     </ul>
  </div>
+</div>
 </div>
 </template>
  
@@ -92,7 +94,7 @@ td {
   overflow-y: scroll;
   left:2%;
   width:90%;
-  height:70%;
+  height:60%;
   top:15%;
   padding:0;
   margin:10px;
@@ -141,12 +143,12 @@ td {
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;
   border: 1px solid #383838;
-  position:relative;
-  left:2%;
+  position:fixed;
+  left:1%;
   width:70%;
-  height:auto;
+  height:40%;
   overflow-y: scroll;
-  top:25%;
+  top:220px;
 
   padding:0;
   margin:0;

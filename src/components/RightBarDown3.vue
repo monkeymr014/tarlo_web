@@ -38,7 +38,27 @@ export default {
 
 @media (max-width: 1024px){ 
 div{
-  display:none;
+position:fixed;
+  top:28%;
+  left:40%;
+  padding:15px;
+    padding-top:15px;
+
+  width: 150px;
+  height: 180px;;
+  background: rgba(0,0,0,0.8);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 1px solid #383838;
+
+}
+span{ 
+  margin:0px;
+  padding:0px;
+  font-size:6px;
+ color:white;
+ 
 }
 }
 

@@ -1,20 +1,20 @@
 <template>
   <div id="con" >
-   <a href="../../assets/Rider.pdf" download>
+   <a href="" download>
     <div @click="onClick()" @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{hovering: hover1}" id="prespack">
     <span>PRESS PACK<br/> DO <br/>POBRANIA</span>
     </div>
     </a>
-    <a href="../../assets/Rider.pdf" download>
+    <a href="javascript:submitBrowseForm('/public_html/dowland','Rider.pdf','downloadfile','');" download>
     <div  @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{hovering: hover2}" id="riderout">
       <span>RIDER <br/> TECHNICZNY <br/>KLUB</span></div>
     </a>
-    <a href="../../assets/Rider.pdf" download>
+    <a href="" download>
     <div @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{hovering: hover3}" id="presinfo">
       <span>A TAK JUŻ <br/> PISALI O TARŁO <br/> NA PORTALCH</span>
     </div>
     </a>
-    <a href="../../assets/Rider.pdf" download>
+    <a href="http://serwer2072071.home.pl/public_html/Rider.pdf" download>
     <div @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{hovering: hover4}" id="riderin">
       <span>RIDER <br/> TECHNICZNY <br/>PLENER</span>
     </div>    
@@ -71,6 +71,7 @@ onClick2() {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 1024px){ 
 
 img {
   height: 110%;
@@ -94,11 +95,95 @@ div {
   -moz-border-radius: 58px 58px 58px 58px;
   -webkit-border-radius: 58px 58px 58px 58px;
   border: 2px solid black;
-  padding:20px 0 0 0;
+  padding:15px ;
+  width:200px;
+  height:50px;
+  position:absolute;
+  margin:0;
+  overflow: hidden;
+  
+}
+
+span{
+  position: absolute;
+  padding:0px;
+  left:0;
+  width:100%;
+  height:auto;
+  color:white;
+  font-size:12px;
+  text-align:center;
+}
+                        
+#prespack{
+  top:10%;
+ left:50%;
+   transform: translate(-50%, -50%)
+
+}
+#presinfo{
+ top:32%; 
+ left:50%;
+   transform: translate(-50%, -50%)
+}
+
+#riderout{
+   top:54%; 
+
+  left:50%;
+   transform: translate(-50%, -50%) 
+}
+
+#riderin{
+top:76%;
+left:50%;
+   transform: translate(-50%, -50%)
+ 
+}
+
+#con{
+  border:none;
+  background:none;
+  position:fixed;
+  left:2%;
+  width:90%;
+  height:68%;
+  top:95px;
+  overflow: visible;
+}
+}
+
+
+@media (min-width: 1024px){ 
+
+img {
+  height: 110%;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  left: 0px;
+  position: absolute;
+  filter: blur(0.9px) brightness(0.6);  
+}
+
+.hovering{
+  transform: scale(1.08); 
+  
+}
+
+div {
+ position:relative;
+  background: rgba(0,0,0,0.6);
+  border-radius: 58px 58px 58px 58px;
+  -moz-border-radius: 58px 58px 58px 58px;
+  -webkit-border-radius: 58px 58px 58px 58px;
+  border: 2px solid black;
+  padding:10px ;
   width:220px;
   height:150px;
   position:absolute;
   margin:0;
+  top:40px;
   overflow: hidden;
   
 }
@@ -142,7 +227,6 @@ top:53%;
   top:195px;
   overflow: visible;
 }
-
-
+}
 
 </style>
