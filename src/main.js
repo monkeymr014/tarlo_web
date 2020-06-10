@@ -4,6 +4,7 @@ import router from './router'
 import VueMeta from 'vue-meta'
 
 import './styles.scss';
+Vue.config.productionTip = false;
 
 
 Vue.use(VueMeta);

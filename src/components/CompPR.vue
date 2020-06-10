@@ -14,7 +14,7 @@
       <span>A TAK JUŻ <br/> PISALI O TARŁO <br/> NA PORTALCH</span>
     </div>
     </a>
-    <a href="http://serwer2072071.home.pl/public_html/Rider.pdf" download>
+    <a href="./Rider.pdf" download>
     <div @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{hovering: hover4}" id="riderin">
       <span>RIDER <br/> TECHNICZNY <br/>PLENER</span>
     </div>    

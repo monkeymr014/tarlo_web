@@ -44,7 +44,7 @@ export default {
 
 }
 #h1 {
-  font-size: 31px;
+  font-size: 33px;
   color:whitesmoke;
   text-align: center;
 }

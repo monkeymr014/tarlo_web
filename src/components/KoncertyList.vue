@@ -94,7 +94,8 @@ td {
   overflow-y: scroll;
   left:2%;
   width:90%;
-  height:60%;
+  height:auto;
+  max-height:60%;
   top:15%;
   padding:0;
   margin:10px;

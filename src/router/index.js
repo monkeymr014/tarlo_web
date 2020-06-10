@@ -69,8 +69,8 @@ const routes = [{
 
 Vue.use(VueMeta);
 const router = new VueRouter({
-    routes,
-    mode: 'history'
+    mode: 'history',
+    routes
 })
 
 export default router
